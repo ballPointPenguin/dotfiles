@@ -9,7 +9,7 @@ URxvt.depth: 32
 URxvt.background: [85]#000000
 
 ## font
-URxvt.font: xft: Dejavu Sans Mono:antialias=true:size=7
+URxvt.font: xft: Dejavu Sans Mono:antialias=true:size=8
 URxvt.foreground: white
 
 ## Set as Login Shell

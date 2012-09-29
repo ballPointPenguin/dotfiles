@@ -5,8 +5,20 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="darkblood"
+#ZSH_THEME="darkblood"
+#ZSH_THEME="dallas"
+#ZSH_THEME="duellj"
+#ZSH_THEME="crunch"
+#ZSH_THEME="bira"
+#ZSH_THEME="dpree"
+#ZSH_THEME="jnrowe"
+#ZSH_THEME="kolo"
+#ZSH_THEME="nebirhos"
+ZSH_THEME="miloshadzic"
+#ZSH_THEME="random"
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -21,10 +33,10 @@ ZSH_THEME="darkblood"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+ DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -35,5 +47,5 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Customize to your needs...
-export PATH=/home/ben/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=/home/ben/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script
 
