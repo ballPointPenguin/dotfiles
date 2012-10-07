@@ -16,7 +16,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="jnrowe"
 #ZSH_THEME="kolo"
 #ZSH_THEME="nebirhos"
-ZSH_THEME="miloshadzic"
+#ZSH_THEME="miloshadzic"
+ZSH_THEME="daveverwer"
 #ZSH_THEME="random"
 
 # Example aliases

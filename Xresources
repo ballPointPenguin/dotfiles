@@ -9,11 +9,16 @@ URxvt.depth: 32
 URxvt.background: [85]#000000
 
 ## font
-URxvt.font: xft: Dejavu Sans Mono:antialias=true:size=8
+##URxvt.font: xft: Dejavu Sans Mono:antialias=true:size=8
+URxvt.font: xft: Inconsolata-dz:antialias=true:size=7
 URxvt.foreground: white
 
 ## Set as Login Shell
 URxvt.loginShell: true
 URxvt.chdir: /home/ben/
+
+URxvt.colorIT: #87af5f
+URxvt.colorBD: #d7d7d7
+URxvt.colorUL: #87afd7
 
 ## run xrdb ~/.Xresources
