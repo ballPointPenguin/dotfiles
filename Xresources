@@ -14,4 +14,6 @@ URxvt.foreground: white
 
 ## Set as Login Shell
 URxvt.loginShell: true
-chdir: /home/ben/
+URxvt.chdir: /home/ben/
+
+## run xrdb ~/.Xresources
