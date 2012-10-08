@@ -35,8 +35,8 @@ URxvt*background: [80]#000000
 !
 ! Xft: DejaVu fonts
 !  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
-!URxvt*font: xft:DejaVu Sans Mono:pixelsize=10:antialias=true:hinting=true
-!URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=10:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=11:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=11:antialias=true:hinting=true
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
@@ -45,12 +45,12 @@ URxvt*background: [80]#000000
 !
 ! Xft: Terminus fonts
 !  Fedora/debian packages: terminus-fonts/xfonts-terminus
-!URxvt*font: xft:terminus:pixelsize=15
-!URxvt*boldFont: xft:terminus:bold:pixelsize=15
+!URxvt*font: xft:terminus:pixelsize=10
+!URxvt*boldFont: xft:terminus:bold:pixelsize=10
 
 ! Xft: My Downloaded font(s)
 !  http://media.nodnod.net/Inconsolata-dz.oft.zip
-URxvt.font: xft: Inconsolata-dz:pixelsize=9:antialias=true:hinting=true
+!URxvt.font: xft: Inconsolata-dz:pixelsize=9:antialias=true:hinting=true
 
 ! Note on manual font installation:
 ! unzip, if necessary, and put into your systems fonts directory,
