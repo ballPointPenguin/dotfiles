@@ -17,7 +17,7 @@ URxvt*saveLines: 12000
 ! font color (default is black)
 URxvt*foreground: White
 
-! true transparency
+! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
 URxvt*background: [80]#000000
@@ -40,13 +40,24 @@ URxvt*background: [80]#000000
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
-URxvt*font: xft:Liberation Mono:pixelsize=12:antialias=true:hinting=true
-URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=12:antialias=true:hinting=true
+!URxvt*font: xft:Liberation Mono:pixelsize=12:antialias=true:hinting=true
+!URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=12:antialias=true:hinting=true
 !
 ! Xft: Terminus fonts
 !  Fedora/debian packages: terminus-fonts/xfonts-terminus
 !URxvt*font: xft:terminus:pixelsize=15
 !URxvt*boldFont: xft:terminus:bold:pixelsize=15
+
+! Xft: My Downloaded font(s)
+!  http://media.nodnod.net/Inconsolata-dz.oft.zip
+URxvt.font: xft: Inconsolata-dz:pixelsize=9:antialias=true:hinting=true
+
+! Note on manual font installation:
+! unzip, if necessary, and put into your systems fonts directory,
+! e.g. /usr/share/fonts
+! run fc-cache -vf (should not need sudo for this)
+
+URxvt.foreground: white
 
 ! Traditional fonts - a more traditional font setup in lieu of xft
 !URxvt*font:-*-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
@@ -57,8 +68,9 @@ URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=12:antialias=true:hinting=tru
 !  the following line to your ~/.bashrc ($HOME/.bashrc) file under
 !  the heading "! User specific aliases and functions":
 !   alias ls="ls -h --color=auto"
-URxvt*color4: RoyalBlue
-URxvt*color12: RoyalBlue
+!   NOT necessary whilst using custom dir_colors (see zshrc file)
+!URxvt*color4: RoyalBlue
+!URxvt*color12: RoyalBlue
 
 ! scrollbar - true (default) or false
 URxvt*scrollBar: false
@@ -73,4 +85,11 @@ URxvt*internalBorder: 1
 !URxvt*scrollstyle: rxvt
 
 URxvt.loginShell: true
-chdir: /home/ben/
+URxvt.chdir: /home/ben/
+
+! color man file output
+URxvt.colorIT: #88af5f
+URxvt.colorBD: #d7d7d7
+URxvt.colorUL: #87afd7
+
+## run xrdb ~/.Xresources

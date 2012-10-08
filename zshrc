@@ -18,6 +18,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="nebirhos"
 ZSH_THEME="miloshadzic"
 #ZSH_THEME="alanpeabody"
+#ZSH_THEME="miloshadzic"
+#ZSH_THEME="daveverwer"
 #ZSH_THEME="random"
 
 # Example aliases
@@ -51,5 +53,22 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Customize to your needs...
-export PATH=/home/ben/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin
+# for single user rvm installation:
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/home/ben/.rvm/bin
+# for multi-user rvm installation:
+#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/usr/local/rvm/bin
 
+# Colored file listings
+# script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
+# dir_colors file cloned from https://github.com/seebi/dircoors-solarized.git
+#
+if test -x /usr/bin/dircolors ; then
+  #
+  # set up the color-ls environment variables:
+  #
+  if test -f $HOME/.dir_colors ; then
+    eval `dircolors -b $HOME/.dir_colors`
+  elif test -f /etc/DIR_COLORS ; then
+    eval `dircolors -b /etc/DIR_COLORS`
+  fi
+fi
