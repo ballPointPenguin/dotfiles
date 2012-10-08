@@ -17,11 +17,15 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="kolo"
 #ZSH_THEME="nebirhos"
 ZSH_THEME="miloshadzic"
+#ZSH_THEME="alanpeabody"
 #ZSH_THEME="random"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+ alias zshconfig="vim ~/.zshrc"
+ alias ohmyzsh="vim ~/.oh-my-zsh"
+ alias ls="ls -h --color=auto"
+ alias guard="guard --no-bundler-warning"
+ alias subl="/usr/bin/sublime_text"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -47,5 +51,5 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Customize to your needs...
-export PATH=/home/ben/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script
+export PATH=/home/ben/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin
 
