@@ -6,21 +6,30 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
+# Themes with RVM integration:
+ZSH_THEME="3den"
+#ZSH_THEME="Soliah"
+#ZSH_THEME="aussiegeek"
+#ZSH_THEME="eastwood"
+#ZSH_THEME="fino-time"
+#ZSH_THEME="gallois"
+#ZSH_THEME="gnzh"
+#ZSH_THEME="jonathan"
+#ZSH_THEME="josh"
+#ZSH_THEME="macovsky-ruby"
+#ZSH_THEME="macovsky"
+#ZSH_THEME="murilasso"
+#ZSH_THEME="superjarin"
+#ZSH_THEME="suvash"
+#ZSH_THEME="wedisagree"
+#ZSH_THEME="wuffers"
+#ZSH_THEME="zhann"
 #ZSH_THEME="robbyrussell"
-#ZSH_THEME="darkblood"
 #ZSH_THEME="dallas"
-#ZSH_THEME="duellj"
 #ZSH_THEME="crunch"
 #ZSH_THEME="bira"
-#ZSH_THEME="dpree"
-#ZSH_THEME="jnrowe"
-#ZSH_THEME="kolo"
 #ZSH_THEME="nebirhos"
-ZSH_THEME="miloshadzic"
 #ZSH_THEME="alanpeabody"
-#ZSH_THEME="miloshadzic"
-#ZSH_THEME="daveverwer"
-#ZSH_THEME="random"
 
 # Example aliases
  alias zshconfig="vim ~/.zshrc"
@@ -54,9 +63,9 @@ unsetopt correct_all
 
 # Customize to your needs...
 # for single user rvm installation:
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/home/ben/.rvm/bin
+#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/home/ben/.rvm/bin
 # for multi-user rvm installation:
-#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/usr/local/rvm/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/usr/local/rvm/bin
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
