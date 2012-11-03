@@ -7,10 +7,10 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # Themes with RVM integration:
-ZSH_THEME="3den"
+#ZSH_THEME="3den"
 #ZSH_THEME="Soliah"
 #ZSH_THEME="aussiegeek"
-#ZSH_THEME="eastwood"
+ZSH_THEME="eastwood"
 #ZSH_THEME="fino-time"
 #ZSH_THEME="gallois"
 #ZSH_THEME="gnzh"
