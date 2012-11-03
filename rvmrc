@@ -4,7 +4,7 @@ export rvm_gems_cache_path="${HOME}/.rvm/gems_cache"
 export rvm_wrappers_path="${HOME}/.rvm/wrappers"
 export rvm_archives_path="${HOME}/.rvm/archives"
 ##use for single-user rvm installation:
-export rvm_bin_path="${HOME}/.rvm/bin"
+##export rvm_bin_path="${HOME}/.rvm/bin"
 ##use for multi-user rvm installation:
 ##export rvm_bin_path="/usr/local/rvm/bin"
 export rvm_log_path="${HOME}/.rvm/log"
