@@ -35,7 +35,7 @@ ZSH_THEME="eastwood"
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
- alias guard="guard --no-bundler-warning"
+ #alias guard="guard --no-bundler-warning"
  alias subl="/usr/bin/sublime_text"
 
 # Set to this to use case-sensitive completion
@@ -65,12 +65,12 @@ unsetopt correct_all
 # for single user rvm installation:
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/home/ben/.rvm/bin:/usr/local/phantomjs/bin
 # for multi-user rvm installation:
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/usr/local/rvm/bin:/usr/local/phantomjs/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/script:$HOME/bin:/usr/local/rvm/bin:/usr/local/phantomjs/bin
 export PGDATA=/var/lib/pgsql/data
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
-# dir_colors file cloned from https://github.com/seebi/dircoors-solarized.git
+# dir_colors file cloned from https://github.com/seebi/dircolors-solarized.git
 #
 if test -x /usr/bin/dircolors ; then
   #
