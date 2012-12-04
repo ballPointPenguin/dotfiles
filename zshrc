@@ -10,8 +10,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="3den"
 #ZSH_THEME="Soliah"
 #ZSH_THEME="aussiegeek"
-ZSH_THEME="eastwood"
-#ZSH_THEME="fino-time"
+#ZSH_THEME="eastwood"
+ZSH_THEME="fino-time"
 #ZSH_THEME="gallois"
 #ZSH_THEME="gnzh"
 #ZSH_THEME="jonathan"
@@ -60,6 +60,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
+
+source $HOME/.rvmrc
 
 # Customize to your needs...
 # for single user rvm installation:
