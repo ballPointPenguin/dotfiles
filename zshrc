@@ -61,7 +61,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-source $HOME/.rvmrc
+#multi-user:
+source /usr/local/rvm/scripts/rvm
+#single-user:
+#source $HOME/.rvmrc
 
 # Customize to your needs...
 # for single user rvm installation:
