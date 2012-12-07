@@ -1,6 +1,13 @@
 "color molokai
-colorscheme ir_black
+"colorscheme ir_black
 "color railscasts2
+"color railscasts+
+"color github
+"color getafe
+"color jellybeans+
+"color pyte
+"color solarized
+color vividchalk
 
 " folding advice from http://smartic.us/2009/04/06/code-folding-in-vim/
 set foldmethod=indent

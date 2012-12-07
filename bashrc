@@ -28,6 +28,7 @@ export EDITOR=/usr/bin/vim
 test -s ~/.alias && . ~/.alias || true
 
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/rvm/bin
 
 export LANG=en_US.UTF-8
 
