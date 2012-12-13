@@ -70,7 +70,7 @@ source /usr/local/rvm/scripts/rvm
 # for single user rvm installation:
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/home/ben/.rvm/bin:/usr/local/phantomjs/bin
 # for multi-user rvm installation:
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/script:$HOME/bin:/usr/local/rvm/bin:/usr/local/phantomjs/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/script:$HOME/bin:/usr/local/rvm/bin:/usr/local/phantomjs/bin:$HOME/android/adt-bundle-linux/eclipse:$HOME/android/adt-bundle-linux/sdk/platform-tools:$HOME/android/adt-bundle-linux/sdk/tools
 export PGDATA=/var/lib/pgsql/data
 
 # Colored file listings
