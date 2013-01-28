@@ -71,9 +71,7 @@ unsetopt correct_all
 
 # Customize to your needs...
 # for single user rvm installation:
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/home/ben/.rvm/bin:/usr/local/phantomjs/bin:/home/ben/adt-bundle-linux/eclipse:/home/ben/adt-bundle-linux/sdk/platform-tools:/home/ben/adt-bundle-linux/sdk/tools:/home/ben/amazon/AWS-ElasticBeanstalk-CLI-2.3/eb/linux/python2.7
-# for multi-user rvm installation:
-#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/ben/script:/home/ben/bin:/usr/local/rvm/bin:/usr/local/phantomjs/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/script:$HOME/bin:$HOME/.rvm/bin
 export PGDATA=/var/lib/pgsql/data
 
 # Colored file listings
