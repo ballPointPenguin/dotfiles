@@ -6,12 +6,13 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
+ZSH_THEME="robbyrussell"
 # Themes with RVM integration:
 #ZSH_THEME="3den"
 #ZSH_THEME="Soliah"
 #ZSH_THEME="aussiegeek"
 #ZSH_THEME="eastwood"
-ZSH_THEME="fino-time"
+#ZSH_THEME="fino-time"
 #ZSH_THEME="gallois"
 #ZSH_THEME="gnzh"
 #ZSH_THEME="jonathan"
@@ -36,15 +37,15 @@ ZSH_THEME="fino-time"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
  #alias guard="guard --no-bundler-warning"
- alias subl="/usr/bin/sublime_text"
+ #alias subl="/usr/bin/sublime_text"
 
 # bindkeys for terminals
-	bindkey "^[[2~" 	overwrite-mode
-	bindkey "^[[3~"	delete-char
-#	bindkey "^[[5~"	# page-up
-#	bindkey "^[[6~"	# page-down
-	bindkey "^[[7~"	beginning-of-line
-	bindkey "^[[8~"	end-of-line
+	#bindkey "^[[2~" 	overwrite-mode
+	#bindkey "^[[3~"	delete-char
+  #bindkey "^[[5~"	# page-up
+  #bindkey "^[[6~"	# page-down
+	#bindkey "^[[7~"	beginning-of-line
+	#bindkey "^[[8~"	end-of-line
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -56,7 +57,7 @@ ZSH_THEME="fino-time"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
- DISABLE_AUTO_TITLE="true"
+ #DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
  COMPLETION_WAITING_DOTS="true"
@@ -71,8 +72,8 @@ unsetopt correct_all
 
 # Customize to your needs...
 # for single user rvm installation:
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/script:$HOME/bin:$HOME/.rvm/bin
-export PGDATA=/var/lib/pgsql/data
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:usr/local/games:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+export PGDATA=/var/lib/postgresql/9.1/main
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
