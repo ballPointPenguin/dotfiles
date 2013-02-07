@@ -6,7 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 # Themes with RVM integration:
 #ZSH_THEME="3den"
 #ZSH_THEME="Soliah"
@@ -24,8 +24,7 @@ ZSH_THEME="robbyrussell"
 #ZSH_THEME="suvash"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
-#ZSH_THEME="zhann"
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="zhann"
 #ZSH_THEME="dallas"
 #ZSH_THEME="crunch"
 #ZSH_THEME="bira"
