@@ -35,8 +35,8 @@ URxvt*background: [80]#000000
 !
 ! Xft: DejaVu fonts
 !  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=10:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=10:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=11:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=11:antialias=true:hinting=true
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
@@ -73,16 +73,16 @@ URxvt.foreground: white
 !URxvt*color12: RoyalBlue
 
 ! scrollbar - true (default) or false
-URxvt*scrollBar: false
+URxvt*scrollBar: true
 
 ! scrollbar position - left=false (default) or right=true
-URxvt*scrollBar_right: false
+URxvt*scrollBar_right: true
 
 URxvt*borderLess: false
 URxvt*internalBorder: 1
 
 ! scrollbar style - rxvt (default), plain, next, or xterm
-!URxvt*scrollstyle: rxvt
+URxvt*scrollstyle: plain
 
 URxvt.loginShell: true
 URxvt.chdir: /home/ben/
@@ -92,6 +92,6 @@ URxvt.colorIT: #88af5f
 URxvt.colorBD: #d7d7d7
 URxvt.colorUL: #87afd7
 
-URxvt.termName: rxvt-unicode-256color
+URxvt.termName: rxvt-unicode
 
 ## run xrdb ~/.Xresources
