@@ -8,7 +8,7 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/.dotfiles_old # old dotfiles backup directory
-files="bashrc dir_colors gitconfig profile rvmrc tmux.conf vimrc.after Xresources xsession zlogin zshrc" # list of files/folders to symlink in homedir
+files="bash_profile bashrc profile tmux.conf" # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,5 +29,3 @@ echo "Moving any existing dotfiles from ~ to $olddir"
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-#install_zsh
