@@ -27,9 +27,18 @@ export EDITOR=/usr/bin/vim
 
 test -s ~/.alias && . ~/.alias || true
 
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/script
 
 export LANG=en_US.UTF-8
 
 alias ls="ls -h --color=auto"
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
+
+if test -x /usr/bin/dircolors ; then
+  if test -f $HOME/.dir_colors ; then
+    eval `dircolors -b $HOME/.dir_colors`
+  elif test -f /etc/DIR_COLORS ; then
+    eval `dircolors -b /etc/DIR_COLORS`
+  fi
+fi
+
