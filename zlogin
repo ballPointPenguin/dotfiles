@@ -5,4 +5,5 @@
 # for multi-user rvm installation:
 #source /etc/profile.d/rvm.sh
 
-source $HOME/script/initaws-acb
+# uncomment if using initaws-acb script
+#source $HOME/script/initaws-acb

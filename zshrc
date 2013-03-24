@@ -71,7 +71,7 @@ unsetopt correct_all
 
 # Customize to your needs...
 # for single user rvm installation:
-export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:usr/local/games:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
 export PGDATA=/var/lib/postgresql/9.1/main
 
 # Colored file listings
