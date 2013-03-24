@@ -35,6 +35,7 @@ ZSH_THEME="zhann"
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
+ alias clipboard='xclip -sel clip'
  #alias guard="guard --no-bundler-warning"
  #alias subl="/usr/bin/sublime_text"
 
