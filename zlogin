@@ -1,6 +1,4 @@
-#
-# for single-user rvm installation:
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# for multi-user rvm installation:
-#source /etc/profile.d/rvm.sh
+export ORACLE_HOME=/usr
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export PATH=$PATH:$ORACLE_HOME
