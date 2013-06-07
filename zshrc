@@ -56,7 +56,7 @@ ZSH_THEME="zhann"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
- DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
  COMPLETION_WAITING_DOTS="true"
@@ -71,8 +71,9 @@ unsetopt correct_all
 
 # Customize to your needs...
 # for single user rvm installation:
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$HOME/script:$HOME/bin:$HOME/.rvm/bin
-export PGDATA=/var/lib/pgsql/data
+export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+
+#export PGDATA=/var/lib/pgsql/data
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -88,3 +89,5 @@ if test -x /usr/bin/dircolors ; then
     eval `dircolors -b /etc/DIR_COLORS`
   fi
 fi
+
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
