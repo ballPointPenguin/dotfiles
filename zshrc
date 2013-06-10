@@ -36,15 +36,6 @@ ZSH_THEME="zhann"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
  #alias guard="guard --no-bundler-warning"
- alias subl="/usr/bin/sublime_text"
-
-# bindkeys for terminals
-	bindkey "^[[2~" 	overwrite-mode
-	bindkey "^[[3~"	delete-char
-#	bindkey "^[[5~"	# page-up
-#	bindkey "^[[6~"	# page-down
-	bindkey "^[[7~"	beginning-of-line
-	bindkey "^[[8~"	end-of-line
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -71,9 +62,9 @@ unsetopt correct_all
 
 # Customize to your needs...
 # for single user rvm installation:
-export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
 
-#export PGDATA=/var/lib/pgsql/data
+test -s ~/.alias && . ~/.alias || true
+alias ls="ls -h --color=auto"
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -89,5 +80,3 @@ if test -x /usr/bin/dircolors ; then
     eval `dircolors -b /etc/DIR_COLORS`
   fi
 fi
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
