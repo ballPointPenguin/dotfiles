@@ -31,10 +31,24 @@ ZSH_THEME="zhann"
 #ZSH_THEME="nebirhos"
 #ZSH_THEME="alanpeabody"
 
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+export LANG=en_US.UTF-8
+export ORACLE_BASE=/oracle
+export ORACLE_HOME=/oracle/product/db
+export ORACLE_INVENTORY=/oracle/inventory
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+export ORACLE_SID=gddb
+export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
+#export PGDATA=/var/lib/pgsql/data
+export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+
 # aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
+ alias evo="cd /home/ben/dev/evolution"
  #alias guard="guard --no-bundler-warning"
 
 # Set to this to use case-sensitive completion
