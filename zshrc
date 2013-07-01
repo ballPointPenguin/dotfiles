@@ -49,6 +49,8 @@ export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
  alias evo="cd /home/ben/dev/evolution"
+ alias td="testdrb -I test"
+ alias tdall="testdrb -I test ./test/**/*_test.rb"
  #alias guard="guard --no-bundler-warning"
 
 # Set to this to use case-sensitive completion
