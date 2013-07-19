@@ -43,13 +43,13 @@ export ORACLE_SID=gddb
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 #export PGDATA=/var/lib/pgsql/data
 export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
-export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
 
 # aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
  alias ls="ls -h --color=auto"
  alias evo="cd /home/ben/dev/evolution"
+ alias xact="cd /home/ben/dev/xact"
  alias td="testdrb -I test"
  alias tdall="testdrb -I test ./test/**/*_test.rb"
  #alias guard="guard --no-bundler-warning"
