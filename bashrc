@@ -10,8 +10,13 @@ export NLS_LANG='american_america.AL32UTF8'
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 export PATH=$ORACLE_HOME/bin:$PATH:$HOME/.rvm/bin
 
+# If not running interactively, do nothing, else exec tmux
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
+
 test -s ~/.alias && . ~/.alias || true
 alias ls="ls -h --color=auto"
+alias bashconfig="vim ~/.bashrc"
 
 if test -x /usr/bin/dircolors ; then
   #

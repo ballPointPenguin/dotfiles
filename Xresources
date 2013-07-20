@@ -1,3 +1,6 @@
+! after modifying, remember to run
+! xrdb ~/.Xresources
+
 ! transparency - true or false (default)
 !URxvt*transparent: true
 
@@ -20,7 +23,7 @@ URxvt*foreground: White
 ! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
-URxvt*background: [80]#000000
+URxvt*background: [75]#000000
 
 ! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
 !  Fedora/debian packages: libXft/libxft2 
@@ -40,8 +43,11 @@ URxvt*background: [80]#000000
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
-URxvt*font: xft:DejavuSansMono:pixelsize=15:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVuSansMono:bold:pixelsize=15:antialias=true:hinting=true
+!URxvt*font: xft:DejavuSansMono:pixelsize=14:antialias=true:hinting=true
+!URxvt*boldFont: xft:DejaVuSansMono:bold:pixelsize=14:antialias=true:hinting=true
+
+URxvt*font: xft:ttf-inconsolata:pixelsize=11:antialias=true:hinting=true
+URxvt*boldFont: xft:inconsolata:bold:pixelsize=11:antialias=true:hinting=true
 !
 ! Xft: Terminus fonts
 !  Fedora/debian packages: terminus-fonts/xfonts-terminus
@@ -82,7 +88,7 @@ URxvt*borderLess: false
 URxvt*internalBorder: 1
 
 ! scrollbar style - rxvt (default), plain, next, or xterm
-!URxvt*scrollstyle: rxvt
+URxvt*scrollstyle: rxvt
 
 URxvt.loginShell: true
 URxvt.chdir: /home/ben/
@@ -94,4 +100,59 @@ URxvt.colorUL: #87afd7
 
 URxvt.termName: rxvt-unicode-256color
 
-! run xrdb ~/.Xresources
+! per github.com/meunnich/urxvt-perls
+
+! keyboard-select:
+URxvt.perl-ext-common: ...,keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+! overwrites the default Meta-s binding and allows to activate keyboard-select directly
+! in backward search mode:
+
+URxvt.keysym.M-s: perl:keyboard-select:search
+! Use Meta-Escape to activate selection mode, then use the following keys:
+! h/j/k/l:    Move cursor left/down/up/right (also with arrow keys)
+! g/G/0/^/$/H/M/L/f/F/;/,/w/W/b/B/e/E: More vi-like cursor movement keys
+! '/'/?:      Start forward/backward search
+! n/N:        Repeat last search, N: in reverse direction
+! Ctrl-f/b:   Scroll down/up one screen
+! Ctrl-d/u:   Scroll down/up half a screen
+! v/V/Ctrl-v: Toggle normal/linewise/blockwise selection
+! y/Return:   Copy selection to primary buffer, Return: deactivate afterwards
+! q/Escape:   Deactivate keyboard selection mode
+
+! This should be used as a replacement for the default matcher extension,
+! it also makes URLs clickable with the middle mouse button.
+URxvt.perl-ext-common: ...,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+
+! url-select
+! Use Meta-u to activate URL selection mode, then use the following keys:
+! j/k:      Select next downward/upward URL (also with arrow keys)
+! g/G:      Select first/last URL (also with home/end key)
+! o/Return: Open selected URL in browser, Return: deactivate afterwards
+! y:        Copy (yank) selected URL and deactivate selection mode
+! q/Escape: Deactivate URL selection mode 
+!
+! if set to true, selected URLs are automatically copied to the PRIMARY buffer
+URxvt.url-select.autocopy: true
+! mouse button to click-open URLs (default: 2, ie scrollwheel)
+URxvt.url-select.button: 2
+! browser/command to open selected URL with
+URxvt.url-select.launcher: /usr/bin/google-chrome
+! if set to true, all URLs get underlinded:
+URxvt.url-select.underline: true
+
+! clipboard
+URxvt.perl-ext-common: ...,clipboard
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+! if set to true, the clipboard is automatically updated whenever the PRIMARY selection changes
+URxvt.clipboard.autocopy: true
+! default system commands for copying/pasting can be overwritten:
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+! or if you prefer xclip:
+! URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+! URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+

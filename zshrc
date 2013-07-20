@@ -44,6 +44,10 @@ export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 #export PGDATA=/var/lib/pgsql/data
 export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
 
+# If not running interactively, do not do anything, else exec tmux
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
+
 # aliases
  alias zshconfig="vim ~/.zshrc"
  alias ohmyzsh="vim ~/.oh-my-zsh"
