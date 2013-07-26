@@ -43,6 +43,7 @@ export ORACLE_SID=gddb
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 #export PGDATA=/var/lib/pgsql/data
 export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+export PYTHONPATH=/usr/lib/python3.3/site-packages
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -101,3 +102,6 @@ if test -x /usr/bin/dircolors ; then
     eval `dircolors -b /etc/DIR_COLORS`
   fi
 fi
+
+# powerline support
+#. /usr/share/zsh/site-contrib/powerline.zsh
