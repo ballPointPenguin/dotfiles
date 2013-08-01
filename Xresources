@@ -47,8 +47,8 @@ URxvt*background: [85]#000000
 !URxvt*boldFont: xft:DejaVuSansMono:bold:pixelsize=14:antialias=true:hinting=true
 
 ! Inconsolata font
-URxvt*font: xft:ttf-inconsolata:pixelsize=8:antialias=true:hinting=true
-URxvt*boldFont: xft:ttf-inconsolata:bold:pixelsize=8:antialias=true:hinting=true
+URxvt*font: xft:ttf-inconsolata:pixelsize=11:antialias=true:hinting=true
+URxvt*boldFont: xft:ttf-inconsolata:bold:pixelsize=11:antialias=true:hinting=true
 
 ! Powerline patched fonts
 !URxvt*font: xft:Inconsolata-dz-Powerline:pixelsize=11

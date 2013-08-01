@@ -8,7 +8,7 @@ export ORACLE_SID=gddb
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib
 export NLS_LANG='american_america.AL32UTF8'
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
-export PATH=$ORACLE_HOME/bin:$PATH:$HOME/.rvm/bin
+export PATH=$ORACLE_HOME/bin:$PATH:$HOME/.rvm/bin:/usr/local/mule/bin
 
 # If not running interactively, do nothing, else exec tmux
 [[ $- != *i* ]] && return

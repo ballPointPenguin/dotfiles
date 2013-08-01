@@ -2,7 +2,7 @@
 
 background no
 use_xft yes
-xftfont 123:size=6
+xftfont 123:size=12
 xftalpha 0.1
 update_interval 1.0
 total_run_times 0
@@ -33,14 +33,14 @@ override_utf8_locale yes
 use_spacer none
 
 TEXT
-${alignc 32}${font Open Sans:size=15}${color lightgray}arch${color dodgerblue3} linux$font$color
-${alignc}${font Open Sans:size=8}${color white}${execi 30 users | cut -f1 -d" "}@$nodename
-$color${font}${font Open Sans:size=15}$alignr${time %H:%M}$font
-${color dodgerblue3}${font Open Sans:Bold:size=8}Date${hr 2}$color$font
-$color${font Open Sans:size=9}$alignr${time %a}, ${time %d %b %Y}$font$color
+${alignc 32}${font Open Sans:size=30}${color lightgray}arch${color dodgerblue3} linux$font$color
+${alignc}${font Open Sans:size=15}${color white}${execi 30 users | cut -f1 -d" "}@$nodename
+$color${font}${font Open Sans:size=30}$alignr${time %H:%M}$font
+${color dodgerblue3}${font Open Sans:Bold:size=15}Date${hr 2}$color$font
+$color${font Open Sans:size=23}$alignr${time %a}, ${time %d %b %Y}$font$color
 
 # SYS
-${font Open Sans:Bold:size=8}${color dodgerblue3}SYSTEM${hr 2}$color${font}
+${font Open Sans:Bold:size=15}${color dodgerblue3}SYSTEM${hr 2}$color${font}
 $sysname $kernel $alignr $machine
 Uptime $alignr $uptime
 
@@ -54,8 +54,8 @@ L-FAN Speed $alignr ${execi 30 sensors | grep 'Left' | cut -f2 -d":" | cut -f1-3
 R-FAN Speed $alignr ${execi 30 sensors | grep 'Right' | cut -f2 -d":" | cut -f1-3 -d" "}
 
 # TOP
-${font Open Sans:Bold:size=8}${color dodgerblue3}TOP${hr 2}
-$color${font}${font Open Sans:bold:size=6}PROCESS $alignr CPU USAGE$font
+${font Open Sans:Bold:size=15}${color dodgerblue3}TOP${hr 2}
+$color${font}${font Open Sans:bold:size=13}PROCESS $alignr CPU USAGE$font
 ${top name 1}${alignr}${top cpu 1} %
 ${top name 2}${alignr}${top cpu 2} %
 ${top name 3}${alignr}${top cpu 3} %
@@ -63,24 +63,24 @@ ${top name 4}${alignr}${top cpu 4} %
 ${top name 5}${alignr}${top cpu 5} %
 
 # MEMORY
-${font Open Sans:Bold:size=8}${color dodgerblue3}MEMORY${hr 2}
-$color${font}${font Open Sans:bold:size=6}RAM$font
+${font Open Sans:Bold:size=15}${color dodgerblue3}MEMORY${hr 2}
+$color${font}${font Open Sans:bold:size=13}RAM$font
 $mem / $memmax $alignr $memperc %
 $membar
 
 # NETWORK
-${font Open Sans:Bold:size=8}${color dodgerblue3}Network${hr 2}
-$color${font Open Sans:bold:size=6}External IP ${font}${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}$font
+${font Open Sans:Bold:size=15}${color dodgerblue3}Network${hr 2}
+$color${font Open Sans:bold:size=13}External IP ${font}${alignr}${execi 3600 wget -O - http://ip.tupeux.com | tail}$font
  
-${font Open Sans:bold:size=6}enp10s0 $font$alignr ${addr enp10s0}
+${font Open Sans:bold:size=12}enp10s0 $font$alignr ${addr enp10s0}
 down $alignr ${downspeedf enp10s0} kb/s
 up $alignr ${upspeedf enp10s0} kb/s
 down total ${totaldown enp10s0} $alignr up total ${totalup enp10s0}
 
 # SSD
-${font Open Sans:Bold:size=8}${color dodgerblue3}Disk${hr 2}
-$color${font Open Sans:bold:size=6}/dev/sda $font$alignr ${execi 30 sudo hddtemp /dev/sda | grep '/dev/sda:' | cut -f5 -d" "}
+${font Open Sans:Bold:size=15}${color dodgerblue3}Disk${hr 2}
+$color${font Open Sans:bold:size=13}/dev/sda $font$alignr ${execi 30 sudo hddtemp /dev/sda | grep '/dev/sda:' | cut -f5 -d" "}
  
-${font Open Sans:bold:size=6}ROOT $font$font$alignr ${fs_type /}
+${font Open Sans:bold:size=13}ROOT $font$font$alignr ${fs_type /}
 ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
 ${fs_bar /}

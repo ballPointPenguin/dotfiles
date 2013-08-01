@@ -41,13 +41,16 @@ export LD_LIBRARY_PATH=$ORACLE_HOME/lib
 export NLS_LANG='american_america.AL32UTF8'
 export ORACLE_SID=gddb
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
-#export PGDATA=/var/lib/pgsql/data
-export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
+export PGDATA=/var/lib/pgsql/data
 export PYTHONPATH=/usr/lib/python3.3/site-packages
+export MULE_HOME=/usr/local/mule
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
+#export JAVA_HOME=/opt/java6
+export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:/usr/local/mule/bin
 
 # If not running interactively, do not do anything, else exec tmux
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX" ]] && exec tmux
 
 # aliases
  alias zshconfig="vim ~/.zshrc"
