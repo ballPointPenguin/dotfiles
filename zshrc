@@ -124,7 +124,6 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Customize to your needs...
-# for single user rvm installation:
 
 test -s ~/.alias && . ~/.alias || true
 alias ls="ls -h --color=auto"
