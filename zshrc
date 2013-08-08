@@ -38,7 +38,7 @@ export PGDATA=/var/lib/pgsql/data
 export PYTHONPATH=/usr/lib/python3.3/site-packages
 export MULE_HOME=/usr/local/mule
 export ORACLE_HOME=/Library/Oracle/instantclient/11.2.0.3.0
-export DYLD_LIBRARY_PATH=$ORACLE_HOME
+#export DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 # recommended by brew doctor
 export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
@@ -51,7 +51,7 @@ export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_H
 # aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias ls="ls -h --color=auto"
+#alias ls="ls -h --color=auto"
 alias evo="cd /home/ben/dev/evolution"
 alias xact="cd /home/ben/dev/xact"
 alias td="testdrb -I test"

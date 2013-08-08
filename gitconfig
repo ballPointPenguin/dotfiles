@@ -1,0 +1,5 @@
+[user]
+	name = Benjamin Rosas
+	email = ballPointPenguin@gmx.us
+[core]
+	editor = vim -w
