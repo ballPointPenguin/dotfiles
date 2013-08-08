@@ -23,8 +23,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="suvash"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
-ZSH_THEME="zhann"
-#ZSH_THEME="robbyrussell"
+#ZSH_THEME="zhann"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="dallas"
 #ZSH_THEME="crunch"
 #ZSH_THEME="bira"
@@ -33,20 +33,16 @@ ZSH_THEME="zhann"
 
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
-export LANG=en_US.UTF-8
-export ORACLE_BASE=/oracle
-export ORACLE_HOME=/oracle/product/db
-export ORACLE_INVENTORY=/oracle/inventory
-export LD_LIBRARY_PATH=$ORACLE_HOME/lib
-export NLS_LANG='american_america.AL32UTF8'
-export ORACLE_SID=gddb
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 export PGDATA=/var/lib/pgsql/data
 export PYTHONPATH=/usr/lib/python3.3/site-packages
 export MULE_HOME=/usr/local/mule
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
-#export JAVA_HOME=/opt/java6
-export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:/usr/local/mule/bin
+export ORACLE_HOME=/Library/Oracle/instantclient/11.2.0.3.0
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+
+# recommended by brew doctor
+export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
+export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -60,7 +56,10 @@ alias evo="cd /home/ben/dev/evolution"
 alias xact="cd /home/ben/dev/xact"
 alias td="testdrb -I test"
 alias tdall="testdrb -I test ./test/**/*_test.rb"
+alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 #alias guard="guard --no-bundler-warning"
+
+# ssh aliases
 alias qc-linux1="ssh qc-linux1.office.gdi"
 alias donkey="ssh evodeploy@10.10.2.30"
 alias qc-mdb1="ssh brosas@qc-mdb1.visi.gdi"
