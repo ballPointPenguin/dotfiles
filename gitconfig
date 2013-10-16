@@ -3,3 +3,5 @@
 	email = ballPointPenguin@gmx.us
 [core]
 	editor = vim -w
+[color]
+	ui = true

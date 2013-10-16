@@ -23,8 +23,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="suvash"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
-#ZSH_THEME="zhann"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="zhann"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="dallas"
 #ZSH_THEME="crunch"
 #ZSH_THEME="bira"
@@ -38,11 +38,16 @@ export PGDATA=/var/lib/pgsql/data
 export PYTHONPATH=/usr/lib/python3.3/site-packages
 export MULE_HOME=/usr/local/mule
 export ORACLE_HOME=/Library/Oracle/instantclient/11.2.0.3.0
+export JAVA_HOME=`/usr/libexec/java_home`
+export TNS_ADMIN=$ORACLE_HOME
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export NLS_LANG='american_america.AL32UTF8'
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 # recommended by brew doctor
-export PATH='/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin'
-export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+export PATH=$ORACLE_HOME:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -52,14 +57,16 @@ export PATH=$ORACLE_HOME/bin:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_H
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 #alias ls="ls -h --color=auto"
-alias evo="cd /home/ben/dev/evolution"
-alias xact="cd /home/ben/dev/xact"
+alias evo="cd ~/dev/evolution"
+alias xact="cd ~/dev/xact"
 alias td="testdrb -I test"
 alias tdall="testdrb -I test ./test/**/*_test.rb"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
-#alias guard="guard --no-bundler-warning"
+alias blah='cd ~/dev/blah'
+alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 
 # ssh aliases
+alias gitlab="ssh brosas@dev-scm.office.gdi"
 alias qc-linux1="ssh qc-linux1.office.gdi"
 alias donkey="ssh evodeploy@10.10.2.30"
 alias qc-mdb1="ssh brosas@qc-mdb1.visi.gdi"
@@ -86,6 +93,10 @@ alias int-ep-evol1="ssh brosas@int-evoweb1-ep.tops.gdi"
 alias int-ep-evol2="ssh brosas@int-evoweb2-ep.tops.gdi"
 alias int-ep-evol3="ssh brosas@int-evoweb3-ep.tops.gdi"
 alias int-ep-evol4="ssh brosas@int-evoweb4-ep.tops.gdi"
+alias prod-ep-evol5="ssh brosas@prod-evoweb5-ep.tops.gdi"
+alias stg-ep-evol5="ssh brosas@stg-evoweb5-ep.tops.gdi"
+alias stg-ep-xact1="ssh brosas@stg-xact1-ep.tops.gdi"
+alias prod-ep-xact1="ssh brosas@prod-xact1-ep.tops.gdi"
 alias int-mdb1="ssh brosas@int-mdb1.visi.gdi"
 alias int-mdb2="ssh brosas@int-mdb2.visi.gdi"
 alias int-pw1="ssh brosas@int-evobg1.visi.gdi"
@@ -122,10 +133,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-# Customize to your needs...
-
-test -s ~/.alias && . ~/.alias || true
-alias ls="ls -h --color=auto"
+source $HOME/.twilio
+source $HOME/.ngrok.conf
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -144,3 +153,8 @@ fi
 
 # powerline support
 #. /usr/share/zsh/site-contrib/powerline.zsh
+
+# suggested by homebrew
+#unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
