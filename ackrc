@@ -23,6 +23,7 @@
 --ignore-directory=is:CMakeFiles
 --ignore-directory=is:bundle
 --ignore-directory=is:log
+--ignore-directory=is:.rvm
 --ignore-file=ext:bak
 --ignore-file=match:/~$/
 --ignore-file=match:/^#.+#$/
