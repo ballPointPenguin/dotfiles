@@ -58,12 +58,17 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 #alias ls="ls -h --color=auto"
 alias evo="cd ~/dev/evolution"
+alias evogems="cd ~/.rvm/gems/ruby-1.9.3-p448@evolution/gems"
 alias xact="cd ~/dev/xact"
 alias td="testdrb -I test"
 alias tdall="testdrb -I test ./test/**/*_test.rb"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
+alias pglog='tail -f /usr/local/var/postgres/server.log'
 alias blah='cd ~/dev/blah'
 alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
+alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
+alias next='git crawl master'
+alias guard='guard --no-bundler-warning'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
