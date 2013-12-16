@@ -23,8 +23,8 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="suvash"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
-ZSH_THEME="zhann"
-#ZSH_THEME="robbyrussell"
+#ZSH_THEME="zhann"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="dallas"
 #ZSH_THEME="crunch"
 #ZSH_THEME="bira"
@@ -43,6 +43,7 @@ export TNS_ADMIN=$ORACLE_HOME
 export LD_LIBRARY_PATH=$ORACLE_HOME
 export NLS_LANG='american_america.AL32UTF8'
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
 # recommended by brew doctor
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -58,7 +59,7 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 #alias ls="ls -h --color=auto"
 alias evo="cd ~/dev/evolution"
-alias evogems="cd ~/.rvm/gems/ruby-1.9.3-p448@evolution/gems"
+alias evogems="cd ~/.rvm/gems/ruby-1.9.3-p484@evolution/gems"
 alias xact="cd ~/dev/xact"
 alias td="testdrb -I test"
 alias tdall="testdrb -I test ./test/**/*_test.rb"
@@ -69,6 +70,7 @@ alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
 alias next='git crawl master'
 alias guard='guard --no-bundler-warning'
+alias jevo="curl http://it-buildbox1.office.gdi:8082/jenkins/job/evolution_unit_tests_rails3/lastFailedBuild/consoleText | grep -A1 '^test' | grep -v '^test' | grep -v '\-\-' | perl -p -i -e 's/:0x0\w+//g' | sort | uniq -c | sort -r"
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
