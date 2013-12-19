@@ -8,28 +8,34 @@ ZSH=$HOME/.oh-my-zsh
 
 # Themes with RVM integration:
 #ZSH_THEME="3den"
-#ZSH_THEME="Soliah"
+#ZSH_THEME="alanpeabody"
+#ZSH_THEME="amuse"
 #ZSH_THEME="aussiegeek"
+#ZSH_THEME="avit"
+#ZSH_THEME="bira"
+#ZSH_THEME="crunch"
+#ZSH_THEME="dallas"
 #ZSH_THEME="eastwood"
 #ZSH_THEME="fino-time"
+#ZSH_THEME="frontcube"
 #ZSH_THEME="gallois"
 #ZSH_THEME="gnzh"
+#ZSH_THEME="half-life"
+ZSH_THEME="itchy"
+#ZSH_THEME="jaischeema"
 #ZSH_THEME="jonathan"
 #ZSH_THEME="josh"
 #ZSH_THEME="macovsky-ruby"
 #ZSH_THEME="macovsky"
 #ZSH_THEME="murilasso"
+#ZSH_THEME="nebirhos"
+#ZSH_THEME="peepcode"
+#ZSH_THEME="simonoff"
+#ZSH_THEME="Soliah"
 #ZSH_THEME="superjarin"
 #ZSH_THEME="suvash"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
-#ZSH_THEME="zhann"
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="dallas"
-#ZSH_THEME="crunch"
-#ZSH_THEME="bira"
-#ZSH_THEME="nebirhos"
-#ZSH_THEME="alanpeabody"
 
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
@@ -48,7 +54,7 @@ export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-ea
 # recommended by brew doctor
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-export PATH=$ORACLE_HOME:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools
+export PATH=$PATH:$ORACLE_HOME:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -66,6 +72,7 @@ alias tdall="testdrb -I test ./test/**/*_test.rb"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 alias pglog='tail -f /usr/local/var/postgres/server.log'
 alias blah='cd ~/dev/blah'
+alias npo='cd ~/dev/npomatters'
 alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
 alias next='git crawl master'
