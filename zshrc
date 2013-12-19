@@ -6,46 +6,58 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-#ZSH_THEME="robbyrussell"
 # Themes with RVM integration:
 #ZSH_THEME="3den"
-#ZSH_THEME="Soliah"
+#ZSH_THEME="alanpeabody"
+#ZSH_THEME="amuse"
 #ZSH_THEME="aussiegeek"
+#ZSH_THEME="avit"
+#ZSH_THEME="bira"
+#ZSH_THEME="crunch"
+#ZSH_THEME="dallas"
 #ZSH_THEME="eastwood"
 #ZSH_THEME="fino-time"
+#ZSH_THEME="frontcube"
 #ZSH_THEME="gallois"
 #ZSH_THEME="gnzh"
+#ZSH_THEME="half-life"
+ZSH_THEME="itchy"
+#ZSH_THEME="jaischeema"
 #ZSH_THEME="jonathan"
 #ZSH_THEME="josh"
 #ZSH_THEME="macovsky-ruby"
 #ZSH_THEME="macovsky"
 #ZSH_THEME="murilasso"
+#ZSH_THEME="nebirhos"
+#ZSH_THEME="peepcode"
+#ZSH_THEME="simonoff"
+#ZSH_THEME="Soliah"
 #ZSH_THEME="superjarin"
 #ZSH_THEME="suvash"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
-ZSH_THEME="zhann"
-#ZSH_THEME="dallas"
-#ZSH_THEME="crunch"
-#ZSH_THEME="bira"
-#ZSH_THEME="nebirhos"
-#ZSH_THEME="alanpeabody"
+
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
+export PGDATA=/var/lib/pgsql/data
+
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin
+
+# If not running interactively, do not do anything, else exec tmux
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
 
 # aliases
- alias zshconfig="vim ~/.zshrc"
- alias ohmyzsh="vim ~/.oh-my-zsh"
- alias ls="ls -h --color=auto"
- alias clipboard='xclip -sel clip'
- #alias guard="guard --no-bundler-warning"
- #alias subl="/usr/bin/sublime_text"
-
-# bindkeys for terminals
-	#bindkey "^[[2~" 	overwrite-mode
-	#bindkey "^[[3~"	delete-char
-  #bindkey "^[[5~"	# page-up
-  #bindkey "^[[6~"	# page-down
-	#bindkey "^[[7~"	beginning-of-line
-	#bindkey "^[[8~"	end-of-line
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+#alias ls="ls -h --color=auto"
+alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
+alias pglog='tail -f /usr/local/var/postgres/server.log'
+alias blah='cd ~/dev/blah'
+alias npo='cd ~/dev/npomatters'
+alias next='git crawl master'
+alias guard='guard --no-bundler-warning'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -57,10 +69,10 @@ ZSH_THEME="zhann"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
- #DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
- COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -70,10 +82,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
-# Customize to your needs...
-# for single user rvm installation:
-export PATH=$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin
-export PGDATA=/var/lib/postgresql/9.1/main
+#source $HOME/.twilio
+#source $HOME/.ngrok.conf
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -89,3 +99,11 @@ if test -x /usr/bin/dircolors ; then
     eval `dircolors -b /etc/DIR_COLORS`
   fi
 fi
+
+# powerline support
+#. /usr/share/zsh/site-contrib/powerline.zsh
+
+# suggested by homebrew
+#unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles

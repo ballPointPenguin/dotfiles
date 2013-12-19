@@ -1,0 +1,28 @@
+[user]
+	name = Benjamin Rosas
+	email = ballPointPenguin@gmx.us
+[core]
+  autocrlf = input
+  safecrlf = false
+	editor = vim -w
+	excludesfile = /home/ben/.gitignore_global
+[github]
+  user = ballPointPenguin
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  ln = log --name-status
+[color]
+	ui = auto
+[push]
+  default = current
+[merge]
+  tool = p4merge
+[branch]
+  autosetuprebase = always
+
