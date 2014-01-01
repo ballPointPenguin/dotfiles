@@ -20,7 +20,7 @@ URxvt*foreground: White
 ! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
-URxvt*background: [80]#000000
+URxvt*background: [90]#000000
 
 ! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
 !  Fedora/debian packages: libXft/libxft2 

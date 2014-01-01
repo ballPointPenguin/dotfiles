@@ -42,7 +42,7 @@ export VISUAL=/usr/bin/vim
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 export PGDATA=/var/lib/pgsql/data
 
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$HOME/local/bin:$HOME/adt/sdk/platform-tools
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
