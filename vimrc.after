@@ -1,3 +1,18 @@
+" Diable auto-comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Clojure vim-fireplace Eval shortcuts
+" a la cooljure.blogspot.com
+nnoremap <C-e> :Eval<CR>
+nnoremap E :%Eval<CR>
+
+" rainbow_parentheses
+" always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 " my faves:
 "colorscheme jellybeans+
 "colorscheme molokai
