@@ -76,7 +76,7 @@ alias npo='cd ~/dev/npomatters'
 alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
 alias next='git crawl master'
-alias guard='guard --no-bundler-warning'
+#alias guard='guard --no-bundler-warning'
 alias jevo="curl http://it-buildbox1.office.gdi:8082/jenkins/job/evolution_unit_tests_rails3/lastFailedBuild/consoleText | grep -A1 '^test' | grep -v '^test' | grep -v '\-\-' | perl -p -i -e 's/:0x0\w+//g' | sort | uniq -c | sort -r"
 
 # ssh aliases
