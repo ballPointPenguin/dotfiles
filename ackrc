@@ -27,6 +27,7 @@
 --ignore-directory=is:tmp
 --ignore-directory=is:cache
 --ignore-directory=is:ember/production
+--ignore-directory=is:coverage
 --ignore-file=ext:bak
 --ignore-file=match:/~$/
 --ignore-file=match:/^#.+#$/
