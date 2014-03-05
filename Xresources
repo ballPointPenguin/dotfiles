@@ -35,8 +35,8 @@ URxvt*background: [90]#000000
 !
 ! Xft: DejaVu fonts
 !  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=11:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=11:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
@@ -85,7 +85,7 @@ URxvt*internalBorder: 1
 URxvt*scrollstyle: plain
 
 URxvt.loginShell: true
-URxvt.chdir: /home/ben/
+URxvt.chdir: /home/brosas/
 
 ! color man file output
 URxvt.colorIT: #88af5f
@@ -94,4 +94,4 @@ URxvt.colorUL: #87afd7
 
 URxvt.termName: rxvt-unicode
 
-## run xrdb ~/.Xresources
+! run xrdb ~/.Xresources

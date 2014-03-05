@@ -42,7 +42,7 @@ export VISUAL=/usr/bin/vim
 export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
 export PGDATA=/var/lib/pgsql/data
 
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$HOME/local/bin:$HOME/adt/sdk/platform-tools
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$HOME/local/bin:$HOME/adt/sdk/platform-tools
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -57,7 +57,7 @@ alias pglog='tail -f /usr/local/var/postgres/server.log'
 alias blah='cd ~/dev/blah'
 alias npo='cd ~/dev/npomatters'
 alias next='git crawl master'
-alias guard='guard --no-bundler-warning'
+#alias guard='guard --no-bundler-warning'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -69,7 +69,7 @@ alias guard='guard --no-bundler-warning'
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
