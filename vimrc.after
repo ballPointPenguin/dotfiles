@@ -17,7 +17,7 @@ au Syntax * RainbowParenthesesLoadBraces
 "colorscheme jellybeans+
 "colorscheme molokai
 "colorscheme getafe
-colorscheme aqua
+"colorscheme aqua
 "colorscheme astronaut
 
 " dark background:
@@ -37,7 +37,7 @@ colorscheme aqua
 "colorscheme github 
 "colorscheme autumn2
 "colorscheme autumnleaf
-"colorscheme baycomb
+colorscheme baycomb
 
 " not (yet) working:
 "colorscheme railscasts+
@@ -50,3 +50,6 @@ set nofoldenable
 set foldlevel=1
 
 set wrap
+
+" activate the clojure interactive interface
+let vimclojure#WantNailgun = 1
