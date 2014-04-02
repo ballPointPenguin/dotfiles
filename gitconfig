@@ -5,7 +5,7 @@
   autocrlf = input
   safecrlf = false
 	editor = vim -w
-	excludesfile = /home/brosas/.gitignore_global
+	excludesfile = /Users/brosas/.gitignore_global
 [github]
   user = ballPointPenguin
 [alias]
@@ -19,3 +19,9 @@
   ln = log --name-status
 [color]
 	ui = auto
+[push]
+  default = current
+[merge]
+  tool = p4merge
+[branch]
+  autosetuprebase = always
