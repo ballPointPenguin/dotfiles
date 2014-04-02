@@ -114,3 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export EDITOR=/usr/bin/vim
+export LANG=en_US.UTF-8
+
