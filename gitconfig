@@ -19,10 +19,3 @@
   ln = log --name-status
 [color]
 	ui = auto
-[push]
-  default = current
-[merge]
-  tool = p4merge
-[branch]
-  autosetuprebase = always
-
