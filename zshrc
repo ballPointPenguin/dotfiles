@@ -40,8 +40,14 @@ ZSH_THEME="itchy"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PGDATA=/var/lib/pgsql/data
+export ORACLE_HOME=/usr/lib/oracle/12.1/client64
+export TNS_ADMIN=$ORACLE_HOME
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export NLS_LANG='american_america.AL32UTF8'
+# export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.rvm/bin:$HOME/local/bin:$HOME/adt/sdk/platform-tools
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/script:$HOME/.rvm/bin:$HOME/local/bin:$HOME/adt/sdk/platform-tools:$ORACLE_HOME
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
