@@ -71,7 +71,6 @@ alias td="testdrb -I test"
 alias tdall="testdrb -I test ./test/**/*_test.rb"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 alias pglog='tail -f /usr/local/var/postgres/server.log'
-alias blah='cd ~/dev/blah'
 alias npo='cd ~/dev/npomatters'
 alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
