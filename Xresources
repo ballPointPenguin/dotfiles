@@ -85,7 +85,7 @@ URxvt*internalBorder: 1
 URxvt*scrollstyle: plain
 
 URxvt.loginShell: true
-URxvt.chdir: /home/ben/
+URxvt.chdir: /home/brosas/
 
 ! color man file output
 URxvt.colorIT: #88af5f
