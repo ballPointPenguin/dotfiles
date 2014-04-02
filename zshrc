@@ -47,7 +47,9 @@ export NLS_LANG='american_america.AL32UTF8'
 # export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/script:$HOME/.rvm/bin:$HOME/local/bin:$HOME/adt/sdk/platform-tools:$ORACLE_HOME
+
+export PATH="/home/brosas/.rvm/gems/ruby-2.1.0/bin:/home/brosas/.rvm/gems/ruby-2.1.0@global/bin:/home/brosas/.rvm/rubies/ruby-2.1.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/.rvm/bin"
+export PATH=$PATH:$HOME/script:$HOME/adt/sdk/platform-tools:$ORACLE_HOME
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
