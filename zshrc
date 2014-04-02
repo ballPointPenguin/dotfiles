@@ -181,7 +181,7 @@ autoload run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 
 # maybe this will help
-__rvm_project_rvmrc
+#__rvm_project_rvmrc
 
 # vim mode
 # set -o vt

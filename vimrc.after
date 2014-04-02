@@ -24,7 +24,7 @@ au Syntax * RainbowParenthesesLoadBraces
 "colorscheme ir_black
 "colorscheme railscasts2
 "colorscheme pyte
-"colorscheme adaryn
+colorscheme adaryn
 "colorscheme adrian
 "colorscheme aiseered
 "colorscheme anotherdark
@@ -34,10 +34,10 @@ au Syntax * RainbowParenthesesLoadBraces
 "colorscheme biogoo
 
 " light background:
-"colorscheme github 
+"colorscheme github
 "colorscheme autumn2
 "colorscheme autumnleaf
-colorscheme baycomb
+"colorscheme baycomb
 
 " not (yet) working:
 "colorscheme railscasts+
