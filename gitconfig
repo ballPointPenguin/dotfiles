@@ -4,7 +4,6 @@
 [core]
   autocrlf = input
   safecrlf = false
-	editor = vim -w
 	excludesfile = /Users/brosas/.gitignore_global
 [github]
   user = ballPointPenguin

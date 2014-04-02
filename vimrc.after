@@ -6,6 +6,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nnoremap <C-e> :Eval<CR>
 nnoremap E :%Eval<CR>
 
+" via tholien, shortcut to current buffer's path
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " rainbow_parentheses
 " always on
 au VimEnter * RainbowParenthesesToggle
@@ -53,3 +56,6 @@ set wrap
 
 " activate the clojure interactive interface
 let vimclojure#WantNailgun = 1
+
+" treat .es6 files like javascript
+au BufNewFile,BufRead *.es6 set filetype=javascript
