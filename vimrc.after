@@ -27,3 +27,6 @@ set wrap
 
 " activate the clojure interactive interface
 let vimclojure#WantNailgun = 1
+
+" play nice with es6 style JavaScripts
+au BufNewFile,BufRead *.es6 set filetype=javascript
