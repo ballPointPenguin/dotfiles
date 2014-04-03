@@ -13,35 +13,9 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-" my faves:
-"colorscheme jellybeans+
-"colorscheme molokai
-"colorscheme getafe
-"colorscheme aqua
-"colorscheme astronaut
-
-" dark background:
-"colorscheme ir_black
-"colorscheme railscasts2
-"colorscheme pyte
-colorscheme adaryn
-"colorscheme adrian
-"colorscheme aiseered
-"colorscheme anotherdark
-"colorscheme asu1dark
-"colorscheme autumn
-"colorscheme bclear
-"colorscheme biogoo
-
-" light background:
-"colorscheme github
-"colorscheme autumn2
-"colorscheme autumnleaf
-"colorscheme baycomb
-
-" not (yet) working:
-"colorscheme railscasts+
-
+" new hotness
+"colorscheme zmrok
+colorscheme zazen
 
 " folding advice from http://smartic.us/2009/04/06/code-folding-in-vim/
 set foldmethod=indent
