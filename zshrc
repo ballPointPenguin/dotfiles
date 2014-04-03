@@ -60,15 +60,16 @@ export PATH=$PATH:$HOME/adt/sdk/platform-tools:$ORACLE_HOME/bin:$JAVA_HOME/bin
 # aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-#alias ls="ls -h --color=auto"
 alias evo='cd ~/govd/evolution'
-#alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 alias pg='sudo /etc/init.d/postgresql'
+alias apache='sudo /etc/init.d/apaceh2'
 alias pglog='tail -f /var/log/postgresql/postgresql-9.3-main.log'
 alias npo='cd ~/ember/npomatters'
 alias gemdir='cd `rvm gemdir`'
 alias next='git crawl master'
 alias ack='ack-grep'
+alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
+alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
