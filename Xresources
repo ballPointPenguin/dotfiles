@@ -20,7 +20,7 @@ URxvt*foreground: White
 ! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
-URxvt*background: [90]#000000
+URxvt*background: [80]#000000
 
 ! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
 !  Fedora/debian packages: libXft/libxft2
@@ -30,27 +30,27 @@ URxvt*background: [90]#000000
 !
 ! Xft: Bitstream fonts
 !  Fedora/debian packages: bitstream-vera-sans-mono-fonts/ttf-bitstream-vera
-!URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=18:antialias=true:hinting=true
-!URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
+!URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=16:antialias=true:hinting=true
+!URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=16:antialias=true:hinting=true
 !
 ! Xft: DejaVu fonts
 !  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=16:antialias=true:hinting=true
 !
 ! Xft: Liberation fonts
 !  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
-!URxvt*font: xft:Liberation Mono:pixelsize=18:antialias=true:hinting=true
-!URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=18:antialias=true:hinting=true
+!URxvt*font: xft:Liberation Mono:pixelsize=16:antialias=true:hinting=true
+!URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=16:antialias=true:hinting=true
 !
 ! Xft: Terminus fonts
 !  Fedora/debian packages: terminus-fonts/xfonts-terminus
-!URxvt*font: xft:terminus:pixelsize=18
-!URxvt*boldFont: xft:terminus:bold:pixelsize=18
+!URxvt*font: xft:terminus:pixelsize=16
+!URxvt*boldFont: xft:terminus:bold:pixelsize=16
 
 ! Xft: My Downloaded font(s)
 !  http://media.nodnod.net/Inconsolata-dz.oft.zip
-!URxvt.font: xft: Inconsolata-dz:pixelsize=18:antialias=true:hinting=true
+!URxvt.font: xft: Inconsolata-dz:pixelsize=16:antialias=true:hinting=true
 
 ! Note on manual font installation:
 ! unzip, if necessary, and put into your systems fonts directory,
