@@ -50,19 +50,19 @@ export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-ea
 export USE_RAILS_3='true'
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
-export PATH=$PATH:/home/brosas/.rvm/gems/ruby-2.1.0/bin:/home/brosas/.rvm/gems/ruby-2.1.0@global/bin:/home/brosas/.rvm/rubies/ruby-2.1.0/bin:/home/brosas/.rvm/bin
+#export PATH=$PATH:/home/brosas/.rvm/gems/ruby-2.1.0/bin:/home/brosas/.rvm/gems/ruby-2.1.0@global/bin:/home/brosas/.rvm/rubies/ruby-2.1.0/bin
+export PATH=$PATH:/home/brosas/.rvm/bin
 export PATH=$PATH:$HOME/adt/sdk/platform-tools:$ORACLE_HOME/bin:$JAVA_HOME/bin
 
 # If not running interactively, do not do anything, else exec tmux
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX" ]] && exec tmux
 
 # aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias evo='cd ~/govd/evolution'
 alias pg='sudo /etc/init.d/postgresql'
-alias apache='sudo /etc/init.d/apaceh2'
 alias pglog='tail -f /var/log/postgresql/postgresql-9.3-main.log'
 alias npo='cd ~/ember/npomatters'
 alias gemdir='cd `rvm gemdir`'
