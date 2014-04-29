@@ -40,19 +40,19 @@ ZSH_THEME="itchy"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export PGDATA=/var/lib/pgsql/9.3/main
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export ORACLE_HOME=/usr/lib/oracle/12.1/client64
-export TNS_ADMIN=$ORACLE_HOME
-export LD_LIBRARY_PATH=$ORACLE_HOME
+#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+#export ORACLE_HOME=/usr/lib/oracle/12.1/client64
+#export TNS_ADMIN=$ORACLE_HOME
+#export LD_LIBRARY_PATH=$ORACLE_HOME
 export NLS_LANG='american_america.AL32UTF8'
-export DYLD_LIBRARY_PATH=$ORACLE_HOME
+#export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 export USE_RAILS_3='true'
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
-#export PATH=$PATH:/home/brosas/.rvm/gems/ruby-2.1.0/bin:/home/brosas/.rvm/gems/ruby-2.1.0@global/bin:/home/brosas/.rvm/rubies/ruby-2.1.0/bin
-export PATH=$PATH:/home/brosas/.rvm/bin
-export PATH=$PATH:$HOME/adt/sdk/platform-tools:$ORACLE_HOME/bin:$JAVA_HOME/bin
+export PATH=$PATH:$HOME/.rvm/bin
+#optional:
+#export PATH=$PATH:$HOME/adt/sdk/platform-tools:$ORACLE_HOME/bin:$JAVA_HOME/bin
 
 # If not running interactively, do not do anything, else exec tmux
 #[[ $- != *i* ]] && return
@@ -70,6 +70,7 @@ alias next='git crawl master'
 alias ack='ack-grep'
 alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
 alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
+alias apache='sudo service apache2'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -100,7 +101,7 @@ alias int-ep-evol2="ssh brosas@int-evoweb2-ep.tops.gdi"
 alias int-ep-evol3="ssh brosas@int-evoweb3-ep.tops.gdi"
 alias int-ep-evol4="ssh brosas@int-evoweb4-ep.tops.gdi"
 alias prod-ep-evol5="ssh brosas@prod-evoweb5-ep.tops.gdi"
-alias stg-ep-evol5="ssh brosas@stg-evoweb5-ep.tops.gdi"
+alias stg-evol1-ep="ssh brosas@stg-evoweb1-ep.tops.gdi"
 alias stg-ep-xact1="ssh brosas@stg-xact1-ep.tops.gdi"
 alias prod-ep-xact1="ssh brosas@prod-xact1-ep.tops.gdi"
 alias int-mdb1="ssh brosas@int-mdb1.visi.gdi"
@@ -191,3 +192,4 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 # vim mode
 # set -o vt
 HELPDIR=/usr/local/share/zsh/helpfiles
+
