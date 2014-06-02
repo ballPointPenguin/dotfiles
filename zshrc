@@ -39,20 +39,20 @@ ZSH_THEME="itchy"
 
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
-export PGDATA=/var/lib/pgsql/9.3/main
+#export PGDATA=/var/lib/pgsql/9.3/main
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export ORACLE_HOME=/usr/lib/oracle/12.1/client64
 #export TNS_ADMIN=$ORACLE_HOME
 #export LD_LIBRARY_PATH=$ORACLE_HOME
-export NLS_LANG='american_america.AL32UTF8'
+#export NLS_LANG='american_america.AL32UTF8'
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
-export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
-export USE_RAILS_3='true'
+#export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
 export PATH=$PATH:$HOME/.rvm/bin
 #optional:
-#export PATH=$PATH:$HOME/adt/sdk/platform-tools:$ORACLE_HOME/bin:$JAVA_HOME/bin
+#export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
+export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
 
 # If not running interactively, do not do anything, else exec tmux
 #[[ $- != *i* ]] && return
@@ -62,15 +62,20 @@ export PATH=$PATH:$HOME/.rvm/bin
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias evo='cd ~/govd/evolution'
-alias pg='sudo /etc/init.d/postgresql'
-alias pglog='tail -f /var/log/postgresql/postgresql-9.3-main.log'
-alias npo='cd ~/ember/npomatters'
+#alias pg='sudo /etc/init.d/postgresql'
+#alias pglog='tail -f /var/log/postgresql/postgresql-9.3-main.log'
+alias npo='cd /home/brosas/dev/npomatters'
 alias gemdir='cd `rvm gemdir`'
 alias next='git crawl master'
 alias ack='ack-grep'
 alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
 alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
 alias apache='sudo service apache2'
+alias chrome='chromium-browser'
+alias npm4='npm cache clear && npm -g update && npm install && npm link'
+#alias psql='sudo -u postgres psql'
+#alias postgresql='sudo service postgresql'
+alias bower='noglob bower'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
