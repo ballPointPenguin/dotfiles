@@ -48,7 +48,7 @@ export VISUAL=/usr/bin/vim
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
 #optional:
 #export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
