@@ -58,6 +58,12 @@ export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME
 #[[ $- != *i* ]] && return
 #[[ -z "$TMUX" ]] && exec tmux
 
+# Use nvm from github clone directory if available:
+if [ -s ~/hub/nvm/nvm.sh ]; then
+  NVM_DIR=~/hub/nvm
+  source ~/hub/nvm/nvm.sh
+fi
+
 # aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
@@ -72,10 +78,10 @@ alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
 alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
 alias apache='sudo service apache2'
 alias chrome='chromium-browser'
-alias npm4='npm cache clear && npm -g update && npm install && npm link'
 #alias psql='sudo -u postgres psql'
 #alias postgresql='sudo service postgresql'
 alias bower='noglob bower'
+alias nom='rm -rf node_modules && npm cache clear && npm i'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -121,6 +127,11 @@ alias buildbox="ssh buildbox.office.gdi"
 alias buildbox1="ssh it-buildbox1.office.gdi"
 alias it-buildbox="ssh it-buildbox1.office.gdi"
 alias int-evohm1="ssh tomcat5@int-evohm1.visi.gdi"
+alias qc-railsweb1="ssh brosas@qc-railsweb1-ep.tops.gdi"
+alias int-railsweb1="ssh brosas@int-railsweb1-ep.tops.gdi"
+alias stg-railsweb1="ssh brosas@stg-railsweb1-ep.tops.gdi"
+alias prod-railsweb1="ssh brosas@prod-railsweb1-ep.tops.gdi"
+
 
 # PS1 settings from default Ubuntu 14.04 .bashrc
 if [ "$color_prompt" = yes ]; then
