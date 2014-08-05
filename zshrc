@@ -40,8 +40,8 @@ ZSH_THEME="itchy"
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 #export PGDATA=/var/lib/pgsql/9.3/main
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-#export ORACLE_HOME=/usr/lib/oracle/12.1/client64
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+#export ORACLE_HOME=/usr/lib/oracle/11.2/client64
 #export TNS_ADMIN=$ORACLE_HOME
 #export LD_LIBRARY_PATH=$ORACLE_HOME
 #export NLS_LANG='american_america.AL32UTF8'
@@ -78,10 +78,13 @@ alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
 alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
 alias apache='sudo service apache2'
 alias chrome='chromium-browser'
-#alias psql='sudo -u postgres psql'
-#alias postgresql='sudo service postgresql'
-alias bower='noglob bower'
+alias psql='sudo -i -u postgres psql'
+alias postgresql='sudo service postgresql'
+#alias bower='noglob bower'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
+alias tilemill='node /usr/share/tilemill/index.js'
+alias ssh='TERM=xterm ssh'
+#alias nbr2mp4='/home/brosas/src/nbr2_mp4/nbr2mp4'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -131,7 +134,7 @@ alias qc-railsweb1="ssh brosas@qc-railsweb1-ep.tops.gdi"
 alias int-railsweb1="ssh brosas@int-railsweb1-ep.tops.gdi"
 alias stg-railsweb1="ssh brosas@stg-railsweb1-ep.tops.gdi"
 alias prod-railsweb1="ssh brosas@prod-railsweb1-ep.tops.gdi"
-
+alias prod-puppet1="ssh brosas@prod-puppet1-ep.tops.gdi"
 
 # PS1 settings from default Ubuntu 14.04 .bashrc
 if [ "$color_prompt" = yes ]; then
@@ -208,4 +211,3 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 # vim mode
 # set -o vt
 HELPDIR=/usr/local/share/zsh/helpfiles
-
