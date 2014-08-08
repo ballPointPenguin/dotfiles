@@ -59,10 +59,14 @@ export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME
 #[[ -z "$TMUX" ]] && exec tmux
 
 # Use nvm from github clone directory if available:
-if [ -s ~/hub/nvm/nvm.sh ]; then
-  NVM_DIR=~/hub/nvm
-  source ~/hub/nvm/nvm.sh
-fi
+#if [ -s ~/hub/nvm/nvm.sh ]; then
+  #NVM_DIR=~/hub/nvm
+  #source ~/hub/nvm/nvm.sh
+#fi
+
+# Use nvm the way god intended:
+export NVM_DIR="/home/ben/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # aliases
 alias zshconfig="vim ~/.zshrc"
