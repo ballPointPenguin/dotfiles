@@ -49,10 +49,11 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin
-#optional:
+# optional:
 #export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
 export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
+# put this last:
+export PATH=$PATH:$HOME/.rvm/bin
 
 # If not running interactively, do not do anything, else exec tmux
 #[[ $- != *i* ]] && return
