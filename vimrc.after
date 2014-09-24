@@ -28,6 +28,12 @@ set wrap
 " activate the clojure interactive interface
 let vimclojure#WantNailgun = 1
 
+" activate perl (and yaml) checker
+"let g:syntastic_perl_lib_path = [ '/usr/lib', '/usr/lib/perl5/auto' ]
+"let g:syntastic_perl_checkers = [ 'perl' ]
+"let g:syntastic_enable_perl_checker = 1
+let g:syntastic_yaml_checkers = [ 'yamlxs' ]
+
 " play nice with es6 style JavaScripts
 au BufNewFile,BufRead *.es6 set filetype=javascript
 
