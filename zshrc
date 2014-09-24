@@ -48,17 +48,12 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
-# Use nvm from github clone directory if available:
-#if [ -s ~/hub/nvm/nvm.sh ]; then
-  #NVM_DIR=~/hub/nvm
-  #source ~/hub/nvm/nvm.sh
-#fi
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
 
 # Use nvm the way god intended:
-export NVM_DIR="/home/ben/.nvm"
+export NVM_DIR="/home/brosas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
 # optional:
 #export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
 export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
@@ -81,8 +76,8 @@ alias npo='cd /home/brosas/dev/npomatters'
 alias gemdir='cd `rvm gemdir`'
 alias next='git crawl master'
 alias ack='ack-grep'
-alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
-alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
+alias vagup='cd /home/brosas/govd/oraclevm && vagrant up && cd /home/brosas/govd/evolution'
+alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt && cd /home/brosas/govd/evolution'
 alias apache='sudo service apache2'
 alias chrome='chromium-browser'
 alias psql='sudo -i -u postgres psql'
@@ -92,6 +87,7 @@ alias nom='rm -rf node_modules && npm cache clear && npm i'
 alias tilemill='node /usr/share/tilemill/index.js'
 alias ssh='TERM=xterm ssh'
 #alias nbr2mp4='/home/brosas/src/nbr2_mp4/nbr2mp4'
+alias es6="node --use-strict $(node --v8-options | grep harm | awk '{print $1}' | xargs)"
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -142,6 +138,7 @@ alias int-railsweb1="ssh brosas@int-railsweb1-ep.tops.gdi"
 alias stg-railsweb1="ssh brosas@stg-railsweb1-ep.tops.gdi"
 alias prod-railsweb1="ssh brosas@prod-railsweb1-ep.tops.gdi"
 alias prod-puppet1="ssh brosas@prod-puppet1-ep.tops.gdi"
+alias qc-overlay-db="ssh -L 3307:test-mysql1-ep.tops.gdi:3306 qc-railsweb1-ep.tops.gdi -N"
 
 # PS1 settings from default Ubuntu 14.04 .bashrc
 if [ "$color_prompt" = yes ]; then
