@@ -116,3 +116,6 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=/usr/bin/vim
 export LANG=en_US.UTF-8
+
+export NVM_DIR="/home/brosas/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
