@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh configuration.
+# Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -37,6 +37,69 @@ ZSH_THEME="itchy"
 #ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
 
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
+# to fix a bug, as described here:
+# github.com/robbyrussell/oh-my-zsh/issues/449
+unsetopt nomatch
+
+# Colored file listings
+# script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
+# dir_colors file cloned from https://github.com/seebi/dircoors-solarized.git
+#
+if test -x /usr/bin/dircolors ; then
+  #
+  # set up the color-ls environment variables:
+  #
+  if test -f $HOME/.dir_colors ; then
+    eval `dircolors -b $HOME/.dir_colors`
+  elif test -f /etc/DIR_COLORS ; then
+    eval `dircolors -b /etc/DIR_COLORS`
+  fi
+fi
+
+# User configuration
+
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 #export PGDATA=/var/lib/pgsql/9.3/main
@@ -49,17 +112,17 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 export PUPPET_PATH="$HOME/govd/puppet/puppet"
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
+export PATH="/home/brosas/bin:/home/brosas/scripts:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:/usr/lib/mit/bin"
 
 # Use nvm the way god intended:
 export NVM_DIR="/home/brosas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # optional:
-#export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
-export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
+# export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
+# export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
 # update per ghc version
-export PATH=$PATH:/opt/ghc/7.8.3/bin
+# export PATH=$PATH:/opt/ghc/7.8.3/bin
 # put this last:
 export PATH=$HOME/.rvm/bin:$PATH
 
@@ -67,7 +130,28 @@ export PATH=$HOME/.rvm/bin:$PATH
 #[[ $- != *i* ]] && return
 #[[ -z "$TMUX" ]] && exec tmux
 
-# aliases
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias evo='cd ~/govd/brosas/evolution'
@@ -141,78 +225,3 @@ alias prod-railsweb1="ssh brosas@prod-railsweb1-ep.tops.gdi"
 alias prod-puppet1="ssh brosas@prod-puppet1-ep.tops.gdi"
 alias qc-overlay-db="ssh -L 3307:test-mysql1-ep.tops.gdi:3306 qc-railsweb1-ep.tops.gdi -N"
 
-# PS1 settings from default Ubuntu 14.04 .bashrc
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-unsetopt correct_all
-# to fix a bug, as described here:
-# github.com/robbyrussell/oh-my-zsh/issues/449
-unsetopt nomatch
-
-#source $HOME/.twilio
-#source $HOME/.ngrok.conf
-
-# Colored file listings
-# script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
-# dir_colors file cloned from https://github.com/seebi/dircoors-solarized.git
-#
-if test -x /usr/bin/dircolors ; then
-  #
-  # set up the color-ls environment variables:
-  #
-  if test -f $HOME/.dir_colors ; then
-    eval `dircolors -b $HOME/.dir_colors`
-  elif test -f /etc/DIR_COLORS ; then
-    eval `dircolors -b /etc/DIR_COLORS`
-  fi
-fi
-
-# powerline support
-#. /usr/share/zsh/site-contrib/powerline.zsh
-
-# suggested by homebrew
-#unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/helpfiles
-
-# maybe this will help
-#__rvm_project_rvmrc
-
-# vim mode
-# set -o vt
-HELPDIR=/usr/local/share/zsh/helpfiles
