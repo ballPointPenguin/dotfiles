@@ -47,6 +47,7 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export NLS_LANG='american_america.AL32UTF8'
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
+export PUPPET_PATH="$HOME/govd/puppet/puppet"
 
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
 
@@ -69,15 +70,15 @@ export PATH=$HOME/.rvm/bin:$PATH
 # aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias evo='cd ~/govd/evolution'
+alias evo='cd ~/govd/brosas/evolution'
 #alias pg='sudo /etc/init.d/postgresql'
 #alias pglog='tail -f /var/log/postgresql/postgresql-9.3-main.log'
 alias npo='cd /home/brosas/dev/npomatters'
 alias gemdir='cd `rvm gemdir`'
 alias next='git crawl master'
 alias ack='ack-grep'
-alias vagup='cd /home/brosas/govd/oraclevm && vagrant up && cd /home/brosas/govd/evolution'
-alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt && cd /home/brosas/govd/evolution'
+alias vagup='cd /home/brosas/govd/oraclevm && vagrant up && cd /home/brosas/govd/brosas/evolution'
+alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt && cd /home/brosas/govd/brosas/evolution'
 alias apache='sudo service apache2'
 alias chrome='chromium-browser'
 alias psql='sudo -i -u postgres psql'
