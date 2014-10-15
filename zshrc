@@ -103,12 +103,12 @@ fi
 export EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 #export PGDATA=/var/lib/pgsql/9.3/main
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-#export ORACLE_HOME=/usr/lib/oracle/11.2/client64
-#export TNS_ADMIN=$ORACLE_HOME
-#export LD_LIBRARY_PATH=$ORACLE_HOME
+export JAVA_HOME=/usr/lib64/jvm/java-1.8.0-openjdk-1.8.0
+export ORACLE_HOME=/usr/lib/oracle/11.2/client64
+export TNS_ADMIN=$ORACLE_HOME/lib
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export NLS_LANG='american_america.AL32UTF8'
-#export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 export PUPPET_PATH="$HOME/govd/puppet/puppet"
 
@@ -119,7 +119,7 @@ export NVM_DIR="/home/brosas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # optional:
-# export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
+export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
 # export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
 # update per ghc version
 # export PATH=$PATH:/opt/ghc/7.8.3/bin
@@ -160,9 +160,8 @@ alias evo='cd ~/govd/brosas/evolution'
 alias npo='cd /home/brosas/dev/npomatters'
 alias gemdir='cd `rvm gemdir`'
 alias next='git crawl master'
-alias ack='ack-grep'
-alias vagup='cd /home/brosas/govd/oraclevm && vagrant up && cd /home/brosas/govd/brosas/evolution'
-alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt && cd /home/brosas/govd/brosas/evolution'
+#alias vagup='cd /home/brosas/govd/oraclevm && vagrant up && cd /home/brosas/govd/brosas/evolution'
+#alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt && cd /home/brosas/govd/brosas/evolution'
 alias apache='sudo service apache2'
 alias chrome='chromium-browser'
 alias psql='sudo -i -u postgres psql'
@@ -172,7 +171,7 @@ alias nom='rm -rf node_modules && npm cache clear && npm i'
 alias tilemill='node /usr/share/tilemill/index.js'
 alias ssh='TERM=xterm ssh'
 #alias nbr2mp4='/home/brosas/src/nbr2_mp4/nbr2mp4'
-alias es6="node --use-strict $(node --v8-options | grep harm | awk '{print $1}' | xargs)"
+#alias es6="node --use-strict $(node --v11-options | grep harm | awk '{print $1}' | xargs)"
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -223,5 +222,6 @@ alias int-railsweb1="ssh brosas@int-railsweb1-ep.tops.gdi"
 alias stg-railsweb1="ssh brosas@stg-railsweb1-ep.tops.gdi"
 alias prod-railsweb1="ssh brosas@prod-railsweb1-ep.tops.gdi"
 alias prod-puppet1="ssh brosas@prod-puppet1-ep.tops.gdi"
+
 alias qc-overlay-db="ssh -L 3307:test-mysql1-ep.tops.gdi:3306 qc-railsweb1-ep.tops.gdi -N"
 
