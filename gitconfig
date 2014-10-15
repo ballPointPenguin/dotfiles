@@ -1,6 +1,7 @@
 [user]
 	name = Benjamin Rosas
-	email = ballPointPenguin@gmx.us
+	;email = ballPointPenguin@gmx.us
+  email = ben.rosas@govdelivery.com
 [core]
   autocrlf = input
   safecrlf = false
