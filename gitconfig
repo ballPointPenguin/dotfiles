@@ -27,5 +27,3 @@
   tool = p4merge
 [branch]
   autosetuprebase = always
-[credential]
-	helper = cache --timeout=3600

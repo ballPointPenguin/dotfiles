@@ -7,34 +7,35 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 # Themes with RVM integration:
+#ZSH_THEME="avit"
+#ZSH_THEME="crunch"
+#ZSH_THEME="dallas"
+#ZSH_THEME="fino-time"
+#ZSH_THEME="frontcube"
+#ZSH_THEME="jaischeema"
+#ZSH_THEME="josh"
+#ZSH_THEME="macovsky-ruby"
+#ZSH_THEME="macovsky"
+#ZSH_THEME="nebirhos"
+#ZSH_THEME="simonoff"
+#ZSH_THEME="Soliah"
+#ZSH_THEME="superjarin"
+#ZSH_THEME="wedisagree"
+# faves:
 #ZSH_THEME="3den"
 #ZSH_THEME="alanpeabody"
 #ZSH_THEME="amuse"
 #ZSH_THEME="aussiegeek"
-#ZSH_THEME="avit"
 #ZSH_THEME="bira"
-#ZSH_THEME="crunch"
-#ZSH_THEME="dallas"
 #ZSH_THEME="eastwood"
-#ZSH_THEME="fino-time"
-#ZSH_THEME="frontcube"
-#ZSH_THEME="gallois"
+#ZSH_THEME="fino"
+ZSH_THEME="gallois"
 #ZSH_THEME="gnzh"
-#ZSH_THEME="half-life"
-ZSH_THEME="itchy"
-#ZSH_THEME="jaischeema"
+#ZSH_THEME="itchy"
 #ZSH_THEME="jonathan"
-#ZSH_THEME="josh"
-#ZSH_THEME="macovsky-ruby"
-#ZSH_THEME="macovsky"
 #ZSH_THEME="murilasso"
-#ZSH_THEME="nebirhos"
 #ZSH_THEME="peepcode"
-#ZSH_THEME="simonoff"
-#ZSH_THEME="Soliah"
-#ZSH_THEME="superjarin"
 #ZSH_THEME="suvash"
-#ZSH_THEME="wedisagree"
 #ZSH_THEME="wuffers"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -120,6 +121,7 @@ export NVM_DIR="/home/brosas/.nvm"
 
 # optional:
 export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
+export PATH=$PATH:$HOME/src/flow/
 # export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
 # update per ghc version
 # export PATH=$PATH:/opt/ghc/7.8.3/bin
@@ -155,23 +157,24 @@ export PATH=$HOME/.rvm/bin:$PATH
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias evo='cd ~/govd/brosas/evolution'
+alias over='cd ~/govd/brosas/overlay'
 #alias pg='sudo /etc/init.d/postgresql'
 #alias pglog='tail -f /var/log/postgresql/postgresql-9.3-main.log'
+#alias psql='sudo -i -u postgres psql'
+alias postgresql='sudo service postgresql'
+#alias pguser='sudo -i -u postgres'
 alias npo='cd /home/brosas/dev/npomatters'
 alias gemdir='cd `rvm gemdir`'
 alias next='git crawl master'
-#alias vagup='cd /home/brosas/govd/oraclevm && vagrant up && cd /home/brosas/govd/brosas/evolution'
-#alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt && cd /home/brosas/govd/brosas/evolution'
 alias apache='sudo service apache2'
-alias chrome='chromium-browser'
-alias psql='sudo -i -u postgres psql'
-alias postgresql='sudo service postgresql'
-#alias bower='noglob bower'
+alias chrome='google-chrome'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
 alias tilemill='node /usr/share/tilemill/index.js'
 alias ssh='TERM=xterm ssh'
 #alias nbr2mp4='/home/brosas/src/nbr2_mp4/nbr2mp4'
 #alias es6="node --use-strict $(node --v11-options | grep harm | awk '{print $1}' | xargs)"
+alias prye='pry -r ./config/environment'
+alias emacs='emacs -nw'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -184,8 +187,6 @@ alias qc-ep-mdb2="ssh brosas@qc-mdb2-ep.tops.gdi"
 alias qc-mq1="ssh brosas@qc-mq1.visi.gdi"
 alias qc-mq2="ssh brosas@qc-mq2.visi.gdi"
 alias qc-mq3="ssh brosas@qc-mq3.visi.gdi"
-alias qc-evol1="ssh brosas@qc-evoweb11.visi.gdi"
-alias qc-evol2="ssh brosas@qc-evoweb12.visi.gdi"
 alias qc-ep-evol1="ssh brosas@qc-evoweb1-ep.tops.gdi"
 alias qc-ep-evol2="ssh brosas@qc-evoweb2-ep.tops.gdi"
 alias qc-pw1="ssh brosas@qc-evobg1.visi.gdi"
@@ -193,10 +194,6 @@ alias qc-pw2="ssh brosas@qc-evobg2.visi.gdi"
 alias qc-tms1="ssh brosas@qc-tms1.visi.gdi"
 alias qc-tms2="ssh brosas@qc-tms2.visi.gdi"
 alias qc-tms3="ssh brosas@qc-tms3.visi.gdi"
-alias int-evol1="ssh brosas@int-evoweb11.visi.gdi"
-alias int-evol2="ssh brosas@int-evoweb12.visi.gdi"
-alias int-evol3="ssh brosas@int-evoweb13.visi.gdi"
-alias int-evol4="ssh brosas@int-evoweb14.visi.gdi"
 alias int-ep-evol1="ssh brosas@int-evoweb1-ep.tops.gdi"
 alias int-ep-evol2="ssh brosas@int-evoweb2-ep.tops.gdi"
 alias int-ep-evol3="ssh brosas@int-evoweb3-ep.tops.gdi"
@@ -224,4 +221,5 @@ alias prod-railsweb1="ssh brosas@prod-railsweb1-ep.tops.gdi"
 alias prod-puppet1="ssh brosas@prod-puppet1-ep.tops.gdi"
 
 alias qc-overlay-db="ssh -L 3307:test-mysql1-ep.tops.gdi:3306 qc-railsweb1-ep.tops.gdi -N"
+alias prod-overlay-db="ssh -L 3307:prod-mysql3-ep.tops.gdi:3306 prod-railsweb1-ep.tops.gdi -N"
 
