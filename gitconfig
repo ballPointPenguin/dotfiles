@@ -1,11 +1,12 @@
 [user]
 	name = Benjamin Rosas
-	email = ballPointPenguin@gmx.us
+	;email = ballPointPenguin@gmx.us
+  email = ben.rosas@govdelivery.com
 [core]
   autocrlf = input
   safecrlf = false
-	editor = vim -w
-	excludesfile = /home/ben/.gitignore_global
+	editor = vim
+	excludesfile = /Users/brosas/.gitignore_global
 [github]
   user = ballPointPenguin
 [alias]
@@ -13,6 +14,7 @@
   ci = commit
   st = status
   br = branch
+  re = rebase
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
@@ -25,4 +27,3 @@
   tool = p4merge
 [branch]
   autosetuprebase = always
-

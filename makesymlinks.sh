@@ -8,8 +8,10 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/.dotfiles_old # old dotfiles backup directory
-files="bash_profile bashrc dir_colors gitconfig profile rvmrc tmux.conf vimrc.after vimrc.before Xresources zlogin zshrc" # list of files/folders to symlink in homedir
-
+# These tend not to exist yet:
+files="ackrc dir_colors gitconfig tmux.conf vimrc.after vimrc.before Xresources" # list of files/folders to symlink in homedir
+# These will clobber the existing versions (so check 'em first):
+#files="bash_profile bashrc profile zlogin zshrc"
 ##########
 
 # create dotfiles_old in homedir
