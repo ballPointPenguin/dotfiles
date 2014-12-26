@@ -6,6 +6,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 nnoremap <C-e> :Eval<CR>
 nnoremap E :%Eval<CR>
 
+" via tholien, shortcut to current buffer's path
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " rainbow_parentheses
 " always on
 au VimEnter * RainbowParenthesesToggle
@@ -53,3 +56,49 @@ set wrap
 
 " activate the clojure interactive interface
 let vimclojure#WantNailgun = 1
+
+" set javascript syntastic checker
+" options include closurecompiler, eslint, gjslint, jshint, jsl, jslint
+" let g:syntastic_javascript_checkers = ['eslint']
+
+if exists('g:loaded_syntastic_javascript_eslint_checker')
+    finish
+endif
+let g:loaded_syntastic_javascript_eslint_checker=1
+
+if !exists('g:syntastic_javascript_eslint_conf')
+    let g:syntastic_javascript_eslint_conf = ''
+endif
+
+function! SyntaxCheckers_javascript_eslint_GetLocList() dict
+    let makeprg = self.makeprgBuild({
+        \ 'args': !empty(g:syntastic_javascript_eslint_conf) ? ' --config ' . g:syntastic_javascript_eslint_conf : '' })
+
+    let errorformat =
+        \ '%E%f: line %l\, col %c\, Error - %m'
+
+    let loclist = SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat,
+        \ 'postprocess': ['sort'] })
+
+    for e in loclist
+        let e['col'] += 1
+    endfor
+
+    return loclist
+endfunction
+
+call g:SyntasticRegistry.CreateAndRegisterChecker({
+    \ 'filetype': 'javascript',
+    \ 'name': 'eslint'})
+
+" treat .es6 files like javascript
+au BufNewFile,BufRead *.es6 set filetype=javascript
+
+" highlight column 80
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif

@@ -46,15 +46,13 @@ export MULE_HOME=/usr/local/mule
 export ORACLE_HOME=/Library/Oracle/instantclient/11.2.0.3.0
 export JAVA_HOME=`/usr/libexec/java_home`
 export TNS_ADMIN=$ORACLE_HOME
-export LD_LIBRARY_PATH=$ORACLE_HOME
+#export LD_LIBRARY_PATH=$ORACLE_HOME
 export NLS_LANG='american_america.AL32UTF8'
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
-# recommended by brew doctor
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
-export PATH=$PATH:$ORACLE_HOME:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools
+export PATH=$HOME/.rvm/bin:$HOME/script:$HOME/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools:$ORACLE_HOME
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -76,8 +74,7 @@ alias npo='cd ~/dev/npomatters'
 alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
 alias next='git crawl master'
-#alias guard='guard --no-bundler-warning'
-alias jevo="curl http://it-buildbox1.office.gdi:8082/jenkins/job/evolution_unit_tests_rails3/lastFailedBuild/consoleText | grep -A1 '^test' | grep -v '^test' | grep -v '\-\-' | perl -p -i -e 's/:0x0\w+//g' | sort | uniq -c | sort -r"
+alias gemdir='cd `rvm gemdir`'
 
 # ssh aliases
 alias gitlab="ssh brosas@dev-scm.office.gdi"
@@ -146,9 +143,13 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
+# to fix a bug, as described here:
+# github.com/robbyrussell/oh-my-zsh/issues/449
+unsetopt nomatch
 
 source $HOME/.twilio
 source $HOME/.ngrok.conf
+source $HOME/.nvm/nvm.sh
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -175,3 +176,7 @@ HELPDIR=/usr/local/share/zsh/helpfiles
 
 # maybe this will help
 __rvm_project_rvmrc
+
+# vim mode
+#set -o vi
+export USE_RAILS_3=true
