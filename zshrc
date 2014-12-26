@@ -51,8 +51,10 @@ export NLS_LANG='american_america.AL32UTF8'
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
-export PATH=$HOME/.rvm/bin:$HOME/script:$HOME/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools:$ORACLE_HOME
+# recommended by brew doctor
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+export PATH=$PATH:$ORACLE_HOME:$PATH:$HOME/script:$HOME/bin:$HOME/.rvm/bin:$MULE_HOME/bin:$HOME/adt/sdk/platform-tools:./node_modules/.bin
 
 # If not running interactively, do not do anything, else exec tmux
 [[ $- != *i* ]] && return
@@ -69,7 +71,6 @@ alias td="testdrb -I test"
 alias tdall="testdrb -I test ./test/**/*_test.rb"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 alias pglog='tail -f /usr/local/var/postgres/server.log'
-alias blah='cd ~/dev/blah'
 alias npo='cd ~/dev/npomatters'
 alias vagup='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant up'
 alias vagdown='cd ~/VirtualBox\ VMs/vagrant-ubuntu-oracle-xe && vagrant halt'
