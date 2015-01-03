@@ -39,8 +39,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_javascript_checkers = ['jslint']
 "let g:syntastic_javascript_checkers = ['jshint']
 
-colorscheme void
-"colorscheme vydark
+"colorscheme void
+colorscheme vydark
 "colorscheme vylight
 "colorscheme wargrey
 "colorscheme warm_grey
