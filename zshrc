@@ -61,7 +61,6 @@ export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
 export DIR_COLORS="$HOME/hub/dircolors-solarized/dircolors.ansi-light"
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.nvm/nvm.sh
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
