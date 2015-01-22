@@ -8,10 +8,7 @@
 
 dir=~/dotfiles # dotfiles directory
 olddir=~/.dotfiles_old # old dotfiles backup directory
-# These tend not to exist yet:
-files="ackrc dir_colors gitconfig tmux.conf vimrc.after vimrc.before Xresources" # list of files/folders to symlink in homedir
-# These will clobber the existing versions (so check 'em first):
-#files="bash_profile bashrc profile zlogin zshrc"
+files="ackrc gitconfig tmux.conf vimrc.after Xmodmap Xresources zshrc"
 ##########
 
 # create dotfiles_old in homedir
@@ -32,4 +29,3 @@ echo "Moving any existing dotfiles from ~ to $olddir"
     ln -s $dir/$file ~/.$file
 done
 
-#install_zsh
