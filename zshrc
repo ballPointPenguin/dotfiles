@@ -58,7 +58,7 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
-export DIR_COLORS="$HOME/hub/dircolors-solarized/dircolors.ansi-light"
+export DIR_COLORS="$HOME/src-hub/dircolors-solarized/dircolors.ansi-light"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.nvm/nvm.sh
