@@ -58,9 +58,14 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
-export DIR_COLORS="$HOME/hub/dircolors-solarized/dircolors.ansi-light"
+export DIR_COLORS="$HOME/src-hub/dircolors-solarized/dircolors.ansi-light"
+# python virtualenv stuff:
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/code/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 source $ZSH/oh-my-zsh.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -81,8 +86,7 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
+
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gemdir='cd `rvm gemdir`'
@@ -90,3 +94,6 @@ alias next='git crawl master'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
 alias ssh='TERM=xterm ssh'
 alias emacs='emacs -nw'
+
+# personal aliases
+alias cupery='cd $HOME/dev/cupery-group'
