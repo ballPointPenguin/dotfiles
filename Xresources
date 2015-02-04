@@ -43,6 +43,9 @@ URxvt*iso14755: false
 ! https://bbs.archlinux.org/viewtopic.php?id=164108
 URxvt.intensityStyles: false
 
+! disable perl extensions completely
+URxvt.perl-ext-common:
+
 ! https://github.com/solarized/xresources
 ! Solarized color scheme for the X Window System
 !
@@ -91,8 +94,8 @@ URxvt.intensityStyles: false
 ! URxvt*background:            S_base03
 
 ! opacity 90%:
-! *background:              [90]S_base03
-*background:              S_base03
+*background:              [90]#002b36
+! *background:              S_base03
 *foreground:              S_base0
 *fading:                  40
 *fadeColor:               S_base03
