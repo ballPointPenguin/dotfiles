@@ -52,7 +52,8 @@ plugins=(git)
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.cabal/bin:$PATH"
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
