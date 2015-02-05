@@ -95,6 +95,7 @@ alias next='git crawl master'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
 alias ssh='TERM=xterm ssh'
 alias emacs='emacs -nw'
+alias lh='ls -1d .??*'
 
 # personal aliases
 alias cupery='cd $HOME/dev/cupery-group'
