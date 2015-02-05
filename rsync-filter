@@ -1,9 +1,7 @@
+# rsync -avhFAX --progress --delete --safe-links $HOME /nfs/rsync-magus/
 + /.atom/
 + /.aws/
 + /.bundle/
-+ /.cabal/
-+ /.eclipse/
-+ /.eclipsefp/
 + /.emacs.d/
 + /.heroku/
 + /.janus/
@@ -27,9 +25,12 @@
 + /dotfiles/
 + /ember/
 + /forks/
-+ /hub/
 + /scripts/
 + /src/
 + /src-hub/
-+ /workspace/
+- .cabal-sandbox/
+- bower_components/
+- node_modules/
+- sandbox/
+- tmp/
 - /*
