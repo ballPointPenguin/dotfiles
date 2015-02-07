@@ -66,7 +66,7 @@ export PROJECT_HOME=$HOME/code/python
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 source $ZSH/oh-my-zsh.sh
-source /usr/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
