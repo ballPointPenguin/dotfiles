@@ -48,6 +48,15 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export REDISCLOUD_URL='redis://rediscloud:mDMOLNYfUbgxpdKy@pub-redis-15413.us-east-1-1.2.ec2.garantiadata.com:15413'
 
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
+# optional:
+#export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
+export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
+# update per ghc version
+export PATH=$PATH:/opt/ghc/7.8.3/bin
+# put this last:
+export PATH=$HOME/.rvm/bin:$PATH
+
 # Use nvm from github clone directory if available:
 #if [ -s ~/hub/nvm/nvm.sh ]; then
   #NVM_DIR=~/hub/nvm
@@ -57,15 +66,6 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 # Use nvm the way god intended:
 export NVM_DIR="/home/ben/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/brosas/scripts:/home/brosas/bin
-# optional:
-#export PATH=$PATH:$ORACLE_HOME/bin:$JAVA_HOME/bin
-export PATH=$PATH:$HOME/src/adt/sdk/platform-tools:$HOME/src/adt/sdk/tools:$HOME/src/adt/eclipse
-# update per ghc version
-export PATH=$PATH:/opt/ghc/7.8.3/bin
-# put this last:
-export PATH=$HOME/.rvm/bin:$PATH
 
 # If not running interactively, do not do anything, else exec tmux
 #[[ $- != *i* ]] && return
@@ -84,7 +84,6 @@ alias ack='ack-grep'
 alias vagup='cd /home/brosas/govd/oraclevm && vagrant up'
 alias vagdown='cd /home/brosas/govd/oraclevm && vagrant halt'
 alias apache='sudo service apache2'
-alias chrome='chromium-browser'
 alias psql='sudo -i -u postgres psql'
 alias postgresql='sudo service postgresql'
 #alias bower='noglob bower'
