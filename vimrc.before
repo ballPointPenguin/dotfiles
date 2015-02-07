@@ -1,5 +1,0 @@
-" vimclojure is no longer developed
-" better to use vim-clojure-static and vim-fireplace
-" www.deepbluelambda.org/programming/clojure/programming-clojure-with-vim-2013-edition
-
-call janus#disable_plugin('vimclojure')
