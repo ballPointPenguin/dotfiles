@@ -1,15 +1,6 @@
 # rsync -avhFAX --progress --delete --safe-links $HOME /nfs/rsync-magus/
-+ /.atom/
-+ /.aws/
-+ /.bundle/
-+ /.emacs.d/
-+ /.heroku/
-+ /.janus/
-+ /.lein/
-+ /.mozilla/
 + /.rsync-filter/
 + /.ssh/
-+ /.vimperator/
 + /Desktop/
 + /Documents/
 + /Downloads/
@@ -18,6 +9,7 @@
 + /Public/
 + /Templates/
 + /Videos/
++ /backup/
 + /bin/
 + /blog/
 + /code/
@@ -25,6 +17,9 @@
 + /dotfiles/
 + /ember/
 + /forks/
++ /frontal/
++ /perkhealth/
++ /playbooks/
 + /scripts/
 + /src/
 + /src-hub/
