@@ -13,8 +13,8 @@ URxvt*background: [70]#000000
 URxvt.foreground: white
 
 ! Xft: DejaVu fonts
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=19:antialias=true:hinting=true
 
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=17:antialias=true:hinting=true
 ! scrollbar - true (default) or false
 URxvt*scrollBar: true
 
