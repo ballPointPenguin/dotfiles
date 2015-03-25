@@ -52,19 +52,23 @@ plugins=(git)
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.cabal/bin:$PATH"
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export LANG=en_US.UTF-8
 export EDITOR="vim"
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
 export DIR_COLORS="$HOME/src-hub/dircolors-solarized/dircolors.ansi-light"
-export WORKON_HOME="$HOME/virtualenvs"
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
+# python virtualenv stuff:
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/code/python
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source /usr/bin/virtualenvwrapper.sh
+#source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.nvm/nvm.sh
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # Colored file listings
 # script lifted from 'openSUSE Linux Unleased', by Michael McCallister, 2008, Sams Publishing
@@ -83,14 +87,16 @@ fi
 # For a full list of active aliases, run `alias`.
 
 # personal aliases
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+alias cupery='cd $HOME/dev/cupery-group'
+alias emacs='emacs -nw'
 alias gemdir='cd `rvm gemdir`'
+alias lh='ls -1d .??*'
 alias next='git crawl master'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
-alias ssh='TERM=xterm ssh'
-alias emacs='emacs -nw'
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias prye='pry -r ./config/environment'
+alias ssh='TERM=xterm ssh'
+alias zshconfig="vim ~/.zshrc"
 
 # work aliases
 alias evo='cd ~/govd/brosas/evolution'
