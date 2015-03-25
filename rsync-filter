@@ -22,7 +22,6 @@
 + /playbooks/
 + /scripts/
 + /src/
-+ /src-hub/
 - .cabal-sandbox/
 - bower_components/
 - node_modules/
