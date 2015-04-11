@@ -101,14 +101,15 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias zshconfig="vim ~/.zshrc"
+alias emacs='emacs -nw'
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gemdir='cd `rvm gemdir`'
+alias gloh="git log --oneline --decorate --color | head"
+alias lh='ls -1d .??*'
 alias next='git-crawl master'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
 alias ssh='TERM=xterm ssh'
-alias emacs='emacs -nw'
-alias lh='ls -1d .??*'
+alias zshconfig="vim ~/.zshrc"
 
 # personal aliases
 alias cupery='cd $HOME/dev/cupery-group'
