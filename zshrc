@@ -50,22 +50,28 @@ plugins=(git)
 
 # User configuration
 
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$PATH
+# export PATH=/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-export PATH="$HOME/.cabal/bin:$PATH"
+# export PATH="$HOME/.cabal/bin:$PATH"
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-export LANG=en_US.UTF-8
-export EDITOR="vim"
 export ARCHFLAGS="-arch x86_64"
-export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
 export DIR_COLORS="$HOME/src-hub/dircolors-solarized/dircolors.ansi-light"
+export EDITOR="vim"
+export LANG=en_US.UTF-8
+export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
+
 # python virtualenv stuff:
 #export WORKON_HOME=$HOME/.virtualenvs
 #export PROJECT_HOME=$HOME/code/python
 #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 #source /usr/bin/virtualenvwrapper.sh
 #source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+# java & oracle stuff
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+export TNS_ADMIN=$ORACLE_HOME/tnsnames.ora
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.nvm/nvm.sh
@@ -90,6 +96,7 @@ fi
 alias cupery='cd $HOME/dev/cupery-group'
 alias emacs='emacs -nw'
 alias gemdir='cd `rvm gemdir`'
+alias gloh="git log --oneline --decorate --color | head"
 alias lh='ls -1d .??*'
 alias next='git crawl master'
 alias nom='rm -rf node_modules && npm cache clear && npm i'
