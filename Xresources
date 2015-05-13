@@ -13,7 +13,7 @@ URxvt.depth: 32
 ! URxvt.foreground: white
 
 ! Xft: DejaVu fonts
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=20:antialias=true:hinting=true
 
 ! scrollbar - true (default) or false
 URxvt*scrollBar: true
@@ -94,8 +94,8 @@ URxvt.perl-ext-common:
 ! URxvt*background:            S_base03
 
 ! opacity 90%:
-*background:              [90]#002b36
-! *background:              S_base03
+!*background:              [90]#002b36
+*background:              S_base03
 *foreground:              S_base0
 *fading:                  40
 *fadeColor:               S_base03
