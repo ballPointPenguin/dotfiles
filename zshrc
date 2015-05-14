@@ -52,8 +52,8 @@ plugins=(git)
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-# export PATH="$HOME/.cabal/bin:$PATH"
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.cabal/bin:$PATH"
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
@@ -101,6 +101,7 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias bom='rm -rf bower_components && bower cache clear && bower i'
 alias emacs='emacs -nw'
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gemdir='cd `rvm gemdir`'
