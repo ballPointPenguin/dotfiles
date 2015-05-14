@@ -53,12 +53,15 @@ plugins=(git)
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="./.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH"
 
 export LANG=en_US.UTF-8
 export EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
+
+# rvm warning told me to:
+unset GEM_HOME
 
 # python virtualenv stuff:
 if test -x /usr/bin/virtualenvwrapper.sh ; then
@@ -114,3 +117,6 @@ alias zshconfig="vim ~/.zshrc"
 
 # personal aliases
 alias cupery='cd $HOME/dev/cupery-group'
+
+# work aliases
+alias evo='cd $HOME/govd/brosas/evolution'
