@@ -104,6 +104,7 @@ fi
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+alias bom='rm -rf bower_components && bower cache clear && bower i'
 alias emacs='emacs -nw'
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias gemdir='cd `rvm gemdir`'
