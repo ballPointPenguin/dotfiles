@@ -55,9 +55,10 @@ plugins=(git)
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="./.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH"
 
-export LANG=en_US.UTF-8
-export EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
+export EDITOR='vim'
+export GOPATH=$HOME/code/go
+export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
 
 # rvm warning told me to:
