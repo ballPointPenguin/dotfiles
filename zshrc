@@ -54,6 +54,7 @@ plugins=(git)
 # export MANPATH="/usr/local/man:$MANPATH"
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export GOPATH="$HOME/code/go"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="./.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
@@ -114,6 +115,7 @@ alias gloh="git log --oneline --decorate --color | head"
 alias lh='ls -1d .??*'
 alias next='git-crawl master'
 alias nom='rm -rf node_modules && npm cache clean && npm i'
+alias nombom='nom && bom'
 alias ssh='TERM=xterm ssh'
 alias zshconfig="vim ~/.zshrc"
 
