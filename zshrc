@@ -52,19 +52,20 @@ plugins=(git)
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export DATOMIC_PATH="/usr/local/src/datomic"
 export GOPATH="$HOME/code/go"
+
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="./.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$GOPATH/bin:$DATOMIC_PATH/bin:$PATH"
 
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='vim'
 export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
 
-# rvm warning told me to:
-unset GEM_HOME
+export NVM_DIR="$HOME/src-hub/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # python virtualenv stuff:
 if test -x /usr/bin/virtualenvwrapper.sh ; then
@@ -75,14 +76,6 @@ if test -x /usr/bin/virtualenvwrapper.sh ; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-
-if test -x $HOME/.nvm/nvm.sh ; then
-  source $HOME/.nvm/nvm.sh
-fi
-
-if test -f /etc/profile.d/rvm.sh ; then
-  source /etc/profile.d/rvm.sh
-fi
 
 #if test -f $HOME/.Xmodmap ; then
   #xmodmap $HOME/.Xmodmap
@@ -108,14 +101,16 @@ fi
 # For a full list of active aliases, run `alias`.
 
 alias bom='rm -rf bower_components && bower cache clean && bower i'
-alias emacs='emacs -nw'
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias gemdir='cd `rvm gemdir`'
+alias emacs='emacsclient -t'
+alias emacsc='emacsclient -c'
+alias emacsd='emacs --daemon'
+alias emacsnw='emacs -nw'
 alias gloh="git log --oneline --decorate --color | head"
 alias lh='ls -1d .??*'
 alias next='git-crawl master'
 alias nom='rm -rf node_modules && npm cache clean && npm i'
 alias nombom='nom && bom'
+alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ssh='TERM=xterm ssh'
 alias zshconfig="vim ~/.zshrc"
 
@@ -124,3 +119,5 @@ alias cupery='cd $HOME/dev/cupery-group'
 
 # work aliases
 alias evo='cd $HOME/govd/brosas/evolution'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
