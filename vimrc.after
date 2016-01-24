@@ -1,11 +1,19 @@
-"color molokai
-colorscheme ir_black
-"color railscasts2
-
-" folding advice from http://smartic.us/2009/04/06/code-folding-in-vim/
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=1
-
 set wrap
+set colorcolumn=80
+set exrc
+
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+"let g:syntastic_javascript_checkers = ['jscs']
+"let g:syntastic_javascript_checkers = ['jshint', 'eslint']
+"let g:syntastic_javascript_checkers = ['jshint']
+
+" Diable auto-comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+colorscheme OceanicNext
+"colorscheme Chasing_Logic
+"colorscheme vydark
+"colorscheme 256-jungle
+
+set secure

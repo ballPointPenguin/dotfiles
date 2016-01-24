@@ -1,5 +1,31 @@
 [user]
-	name = Ben Rosas
+	name = Benjamin Rosas
 	email = ballPointPenguin@gmx.us
+  ;email = ben.rosas@govdelivery.com
 [core]
-	askpass = /usr/lib64/ssh/ksshaskpass
+  autocrlf = input
+  safecrlf = false
+	editor = vim
+	excludesfile = /Users/brosas/.gitignore_global
+[github]
+  user = ballPointPenguin
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  re = rebase
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  ln = log --name-status
+[color]
+	ui = auto
+[push]
+  default = current
+[merge]
+  tool = p4merge
+[branch]
+  autosetuprebase = always
+[credential]
+	helper = cache --timeout=43200

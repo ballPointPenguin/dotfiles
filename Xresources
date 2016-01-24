@@ -1,95 +1,122 @@
-! transparency - true or false (default)
-!URxvt*transparent: true
-
-! tint with any color; i.e., blue, red, tomato4, olivedrab2, etc.
-!   some nice listings are at:
-!     http://www.nisrv.com/drupal/?q=node/11
-!     http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
-!URxvt*tintColor: Blue
-
-! shading - 0 to 99 darkens, 101 to 200 lightens.
-! Dont use with tintColor; just use a darker or lighter color instead.
-! URxvt*shading: 40
+! run xrdb ~/.Xresources
 
 ! scrollback buffer lines - 65535 is max on most machines (64 is default)
 URxvt*saveLines: 12000
 
 ! font color (default is black)
-URxvt*foreground: White
+! URxvt*foreground: White
 
 ! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
 URxvt*background: [80]#000000
+! URxvt.foreground: white
 
-! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
-!  Fedora/debian packages: libXft/libxft2 
-!  An anti-aliased font setup with Xft looks fantastic; it can be a bit choppy 
-!  on older systems. You can always turn off anti-aliasing (antialias=false) if
-!  your terminal is sluggish. Use only ONE of the Xft pairs below:
-!
-! Xft: Bitstream fonts
-!  Fedora/debian packages: bitstream-vera-sans-mono-fonts/ttf-bitstream-vera 
-!URxvt*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true
-!URxvt*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
-!
 ! Xft: DejaVu fonts
-!  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=9:antialias=true:hinting=true
-URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=9:antialias=true:hinting=true
-!
-! Xft: Liberation fonts
-!  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
-!URxvt*font: xft:Liberation Mono:pixelsize=12:antialias=true:hinting=true
-!URxvt*boldFont: xft:Liberation Mono:bold:pixelsize=12:antialias=true:hinting=true
-!
-! Xft: Terminus fonts
-!  Fedora/debian packages: terminus-fonts/xfonts-terminus
-!URxvt*font: xft:terminus:pixelsize=10
-!URxvt*boldFont: xft:terminus:bold:pixelsize=10
-
-! Xft: My Downloaded font(s)
-!  http://media.nodnod.net/Inconsolata-dz.oft.zip
-!URxvt.font: xft: Inconsolata-dz:pixelsize=9:antialias=true:hinting=true
-
-! Note on manual font installation:
-! unzip, if necessary, and put into your systems fonts directory,
-! e.g. /usr/share/fonts
-! run fc-cache -vf (should not need sudo for this)
-
-URxvt.foreground: white
-
-! Traditional fonts - a more traditional font setup in lieu of xft
-!URxvt*font:-*-courier-medium-r-normal-*-14-*-*-*-*-*-iso8859-1
-!URxvt*boldFont:-*-courier-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
-
-! Replace blue folder colors with a lighter shade for clarity. To
-!  set colored folders and files within urxvt, xterm, and aterm, add
-!  the following line to your ~/.bashrc ($HOME/.bashrc) file under
-!  the heading "! User specific aliases and functions":
-!   alias ls="ls -h --color=auto"
-!   NOT necessary whilst using custom dir_colors (see zshrc file)
-!URxvt*color4: RoyalBlue
-!URxvt*color12: RoyalBlue
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=17:antialias=true:hinting=true
 
 ! scrollbar - true (default) or false
-URxvt*scrollBar: false
+URxvt*scrollBar: true
 
 ! scrollbar position - left=false (default) or right=true
-URxvt*scrollBar_right: false
+URxvt*scrollBar_right: true
 
 URxvt*borderLess: false
 URxvt*internalBorder: 1
 
 ! scrollbar style - rxvt (default), plain, next, or xterm
-!URxvt*scrollstyle: rxvt
+URxvt*scrollstyle: plain
 
 URxvt.loginShell: true
-URxvt.chdir: /home/ben/
+URxvt.chdir: /home/brosas
 
 ! color man file output
-URxvt.colorIT: #88af5f
-URxvt.colorBD: #d7d7d7
-URxvt.colorUL: #87afd7
+! URxvt.colorIT: #88af5f
+! URxvt.colorBD: #d7d7d7
+! URxvt.colorUL: #87afd7
 
-## run xrdb ~/.Xresources
+! URxvt.termName: rxvt-unicode
+
+! disable ctrl+shift character thingy
+URxvt*iso14755: false
+
+! https://bbs.archlinux.org/viewtopic.php?id=164108
+URxvt.intensityStyles: false
+
+! disable perl extensions completely
+URxvt.perl-ext-common:
+
+! https://github.com/solarized/xresources
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+
+
+! Common
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+
+! Dark
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+
+! Light
+
+! #define S_base03        #fdf6e3
+! #define S_base02        #eee8d5
+! #define S_base01        #93a1a1
+! #define S_base00        #839496
+! #define S_base0         #657b83
+! #define S_base1         #586e75
+! #define S_base2         #073642
+! #define S_base3         #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background:            S_base03
+
+! opacity 90%:
+!*background:              [90]#002b36
+*background:              S_base03
+*foreground:              S_base0
+*fading:                  40
+*fadeColor:               S_base03
+*cursorColor:             S_base1
+*pointerColorBackground:  S_base01
+*pointerColorForeground:  S_base1
+
+*color0:                  S_base02
+*color1:                  S_red
+*color2:                  S_green
+*color3:                  S_yellow
+*color4:                  S_blue
+*color5:                  S_magenta
+*color6:                  S_cyan
+*color7:                  S_base2
+*color8:                  S_base03
+*color9:                  S_orange
+*color10:                 S_base01
+*color11:                 S_base00
+*color12:                 S_base0
+*color13:                 S_violet
+*color14:                 S_base1
+*color15:                 S_base3
+
