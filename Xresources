@@ -9,7 +9,7 @@ URxvt*saveLines: 12000
 ! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
-! URxvt*background: [70]#000000
+URxvt*background: [80]#000000
 ! URxvt.foreground: white
 
 ! Xft: DejaVu fonts

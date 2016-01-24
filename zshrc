@@ -54,10 +54,13 @@ plugins=(git)
 # export MANPATH="/usr/local/man:$MANPATH"
 export DATOMIC_PATH="/usr/local/src/datomic"
 export GOPATH="$HOME/code/go"
+export PHANTOMPATH="$HOME/src-hub/phantomjs"
+export WEBSTORM_PATH="$HOME/src/webstorm"
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="./.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH"
-export PATH="$GOPATH/bin:$DATOMIC_PATH/bin:$PATH"
+export PATH="$WEBSTORM_PATH/bin:$PHANTOMPATH/bin:$GOPATH/bin:$DATOMIC_PATH/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export ARCHFLAGS="-arch x86_64"
 export EDITOR='vim'
@@ -66,6 +69,9 @@ export SSH_KEY_PATH="~/.ssh/bpp/rsa_id"
 
 export NVM_DIR="$HOME/src-hub/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # python virtualenv stuff:
 if test -x /usr/bin/virtualenvwrapper.sh ; then
@@ -112,12 +118,8 @@ alias nom='rm -rf node_modules && npm cache clean && npm i'
 alias nombom='nom && bom'
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ssh='TERM=xterm ssh'
+alias zomg='git add . && git stash && git stash drop'
 alias zshconfig="vim ~/.zshrc"
 
 # personal aliases
 alias cupery='cd $HOME/dev/cupery-group'
-
-# work aliases
-alias evo='cd $HOME/govd/brosas/evolution'
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
