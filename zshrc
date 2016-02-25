@@ -52,6 +52,7 @@ plugins=(git)
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+export ANSIBLE_HOME="$HOME/src-hub/ansible"
 export DATOMIC_PATH="/usr/local/src/datomic"
 export GOPATH="$HOME/code/go"
 export PHANTOMPATH="$HOME/src-hub/phantomjs"
@@ -59,7 +60,7 @@ export WEBSTORM_PATH="$HOME/src/webstorm"
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="./.cabal-sandbox/bin:$HOME/.cabal/bin:$PATH"
-export PATH="$WEBSTORM_PATH/bin:$PHANTOMPATH/bin:$GOPATH/bin:$DATOMIC_PATH/bin:$PATH"
+export PATH="$WEBSTORM_PATH/bin:$PHANTOMPATH/bin:$GOPATH/bin:$DATOMIC_PATH/bin:$ANSIBLE_HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export ARCHFLAGS="-arch x86_64"
