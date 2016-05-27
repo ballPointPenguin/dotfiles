@@ -1,122 +1,90 @@
-! run xrdb ~/.Xresources
+#define   aqua               #00ffff
+#define   atlantis           #93d44f
+#define   bittersweet        #ff6565
+#define   black              #000000
+#define   cabbage_pont       #555753
+#define   chetwood_blue      #6c71c4
+#define   cornflower_blue    #46a4ff
+#define   curious_blue       #268bd2
+#define   dark_goldenrod     #b58900
+#define   deep_cerise        #d33682
+#define   deep_pink          #ff1493
+#define   endeavor           #204a87
+#define   half_pearl_lusta   #eee8d5
+#define   hoki               #657b83
+#define   java               #2aa198
+#define   jordy_blue         #89b6e2
+#define   lime               #00ff00
+#define   lochmara           #3465a4
+#define   mona_lisa          #ff8d8d
+#define   nordic             #073642
+#define   nordic_dark        #001b22
+#define   old_lace           #fdf6e3
+#define   olive              #859900
+#define   pale_sky           #586e75
+#define   persian_red        #dc322f
+#define   reef               #c8e7a8
+#define   rust               #cb4b16
+#define   submarine          #839496
+#define   submarine_light    #c8cfcf
+#define   tangerine          #f57900
+#define   tawny              #ce5c00
+#define   tulip_tree         #eab93d
+#define   turbo              #ffc123
+#define   very_light_grey    #cccccc
+#define   white              #ffffff
 
-! scrollback buffer lines - 65535 is max on most machines (64 is default)
-URxvt*saveLines: 12000
+URxvt.colorBD:             deep_pink
+URxvt.colorIT:             lime
+URxvt.colorUL:             aqua
+URxvt.depth:               32
+URxvt.fading:              20
+URxvt.font:                9x15bold, xft:DejaVu Sans Mono
+URxvt.keysym.M-s:          searchable-scrollback:start
+URxvt.loginShell:          true
+URxvt.perl-ext-common:     default,matcher
+URxvt.saveLines:           65535
+URxvt.scrollBar:           true
+URxvt.scrollBar_right:     true
+URxvt.scrollstyle:         plain
+URxvt.url-launcher:        firefox
 
-! font color (default is black)
-! URxvt*foreground: White
+*background:               nordic_dark
+*cursorColor:              submarine_light
+*foreground:               old_lace
+*pointerColorBackground:   pale_sky
+*pointerColorForeground:   submarine_light
 
-! true transparency (not to be confused with transparent: true) <-wtf?
-URxvt.depth: 32
-! background color (prior to tinting) (default is white)
-URxvt*background: [80]#000000
-! URxvt.foreground: white
+*color0:                   black
+*color8:                   cabbage_pont
+!*color1:                   bittersweet
+!*color9:                   mona_lisa
+*color2:                   atlantis
+*color10:                  reef
+!*color3:                   tulip_tree
+!*color11:                  turbo
+*color4:                   endeavor
+*color12:                  lochmara
+!*color5:                   tawny
+!*color13:                  tangerine
+*color6:                   jordy_blue
+*color14:                  cornflower_blue
+*color7:                   very_light_grey
+*color15:                  white
 
-! Xft: DejaVu fonts
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=17:antialias=true:hinting=true
-
-! scrollbar - true (default) or false
-URxvt*scrollBar: true
-
-! scrollbar position - left=false (default) or right=true
-URxvt*scrollBar_right: true
-
-URxvt*borderLess: false
-URxvt*internalBorder: 1
-
-! scrollbar style - rxvt (default), plain, next, or xterm
-URxvt*scrollstyle: plain
-
-URxvt.loginShell: true
-URxvt.chdir: /home/brosas
-
-! color man file output
-! URxvt.colorIT: #88af5f
-! URxvt.colorBD: #d7d7d7
-! URxvt.colorUL: #87afd7
-
-! URxvt.termName: rxvt-unicode
-
-! disable ctrl+shift character thingy
-URxvt*iso14755: false
-
-! https://bbs.archlinux.org/viewtopic.php?id=164108
-URxvt.intensityStyles: false
-
-! disable perl extensions completely
-URxvt.perl-ext-common:
-
-! https://github.com/solarized/xresources
-! Solarized color scheme for the X Window System
-!
-! http://ethanschoonover.com/solarized
-
-
-! Common
-
-#define S_yellow        #b58900
-#define S_orange        #cb4b16
-#define S_red           #dc322f
-#define S_magenta       #d33682
-#define S_violet        #6c71c4
-#define S_blue          #268bd2
-#define S_cyan          #2aa198
-#define S_green         #859900
-
-
-! Dark
-
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
-
-
-! Light
-
-! #define S_base03        #fdf6e3
-! #define S_base02        #eee8d5
-! #define S_base01        #93a1a1
-! #define S_base00        #839496
-! #define S_base0         #657b83
-! #define S_base1         #586e75
-! #define S_base2         #073642
-! #define S_base3         #002b36
-
-
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
-!
-! URxvt*background:            S_base03
-
-! opacity 90%:
-!*background:              [90]#002b36
-*background:              S_base03
-*foreground:              S_base0
-*fading:                  40
-*fadeColor:               S_base03
-*cursorColor:             S_base1
-*pointerColorBackground:  S_base01
-*pointerColorForeground:  S_base1
-
-*color0:                  S_base02
-*color1:                  S_red
-*color2:                  S_green
-*color3:                  S_yellow
-*color4:                  S_blue
-*color5:                  S_magenta
-*color6:                  S_cyan
-*color7:                  S_base2
-*color8:                  S_base03
-*color9:                  S_orange
-*color10:                 S_base01
-*color11:                 S_base00
-*color12:                 S_base0
-*color13:                 S_violet
-*color14:                 S_base1
-*color15:                 S_base3
-
+!*color0:                   nordic
+!*color8:                   nordic_dark
+*color1:                   persian_red
+*color9:                   rust
+!*color2:                   olive
+!*color10:                  pale_sky
+*color3:                   dark_goldenrod
+*color11:                  hoki
+!*color4:                   curious_blue
+!*color12:                  submarine
+*color5:                   deep_cerise
+*color13:                  chetwood_blue
+!*color6:                   java
+!*color14:                  submarine_light
+!*color7:                   half_pearl_lusta
+!*color15:                  old_lace
