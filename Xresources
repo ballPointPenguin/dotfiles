@@ -34,13 +34,7 @@
 #define   very_light_grey    #cccccc
 #define   white              #ffffff
 
-!URxvt.font: 9x15bold, xft:DejaVu Sans Mono
-!URxvt.font: xft:DejaVu Sans Mono:pixelsize=17:antialias=true:hinting=true
-URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=16
-!URxvt.font: 9x15bold,\
-            !misc-fixed-bold-r-normal--15-40-75-75-c-90-iso-10646-1,\
-            !misc-fixed-medium-r-normal--15-40-75-75-c-90-iso-10646-1,\
-            !xft:Code2000:antialias=false
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
 
 URxvt.colorBD:             deep_pink
 URxvt.colorIT:             lime
