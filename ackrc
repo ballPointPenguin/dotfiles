@@ -3,6 +3,7 @@
 --ignore-directory=is:.cdv
 --ignore-directory=is:.git
 --ignore-directory=is:.hg
+--ignore-directory=is:.idea
 --ignore-directory=is:.pc
 --ignore-directory=is:.rvm
 --ignore-directory=is:.svn
