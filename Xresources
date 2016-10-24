@@ -34,7 +34,9 @@
 #define   very_light_grey    #cccccc
 #define   white              #ffffff
 
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=16:antialias=true:hinting=true
+!URxvt.font: xft:DejaVu Sans Mono:pixelsize=15:antialias=true:hinting=true
+!URxvt.font: xft:DejaVu Sans Mono:pixelsize=17:antialias=true:hinting=true
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=21:antialias=true:hinting=true
 
 URxvt.colorBD:             deep_pink
 URxvt.colorIT:             lime
