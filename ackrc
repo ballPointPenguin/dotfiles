@@ -22,6 +22,7 @@
 --ignore-directory=is:cache
 --ignore-directory=is:cover_db
 --ignore-directory=is:coverage
+--ignore-directory=is:deps
 --ignore-directory=is:dist
 --ignore-directory=is:ember/production
 --ignore-directory=is:log
