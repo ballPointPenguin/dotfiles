@@ -4,7 +4,16 @@ set modifiable
 set secure
 set wrap
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_mode_map = { "mode": "active" }
 
 " Disable auto-comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -17,3 +26,4 @@ set background=dark
 "colorscheme Chasing_Logic
 "colorscheme OceanicNext
 "colorscheme vydark
+
