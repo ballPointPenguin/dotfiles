@@ -1,104 +1,19 @@
-" Diable auto-comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" Clojure vim-fireplace Eval shortcuts
-" a la cooljure.blogspot.com
-nnoremap <C-e> :Eval<CR>
-nnoremap E :%Eval<CR>
-
-" via tholien, shortcut to current buffer's path
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-
-" rainbow_parentheses
-" always on
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-" my faves:
-"colorscheme jellybeans+
-"colorscheme molokai
-"colorscheme getafe
-"colorscheme aqua
-"colorscheme astronaut
-
-" dark background:
-"colorscheme ir_black
-"colorscheme railscasts2
-"colorscheme pyte
-"colorscheme adaryn
-"colorscheme adrian
-"colorscheme aiseered
-"colorscheme anotherdark
-"colorscheme asu1dark
-"colorscheme autumn
-"colorscheme bclear
-"colorscheme biogoo
-
-" light background:
-"colorscheme github 
-"colorscheme autumn2
-"colorscheme autumnleaf
-colorscheme baycomb
-
-" not (yet) working:
-"colorscheme railscasts+
-
-
-" folding advice from http://smartic.us/2009/04/06/code-folding-in-vim/
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=1
-
+set colorcolumn=80
+set exrc
+set modifiable
+set secure
 set wrap
 
-" activate the clojure interactive interface
-let vimclojure#WantNailgun = 1
+let g:syntastic_javascript_checkers = ['eslint']
 
-" set javascript syntastic checker
-" options include closurecompiler, eslint, gjslint, jshint, jsl, jslint
-" let g:syntastic_javascript_checkers = ['eslint']
+" Disable auto-comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-if exists('g:loaded_syntastic_javascript_eslint_checker')
-    finish
-endif
-let g:loaded_syntastic_javascript_eslint_checker=1
-
-if !exists('g:syntastic_javascript_eslint_conf')
-    let g:syntastic_javascript_eslint_conf = ''
-endif
-
-function! SyntaxCheckers_javascript_eslint_GetLocList() dict
-    let makeprg = self.makeprgBuild({
-        \ 'args': !empty(g:syntastic_javascript_eslint_conf) ? ' --config ' . g:syntastic_javascript_eslint_conf : '' })
-
-    let errorformat =
-        \ '%E%f: line %l\, col %c\, Error - %m'
-
-    let loclist = SyntasticMake({
-        \ 'makeprg': makeprg,
-        \ 'errorformat': errorformat,
-        \ 'postprocess': ['sort'] })
-
-    for e in loclist
-        let e['col'] += 1
-    endfor
-
-    return loclist
-endfunction
-
-call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'javascript',
-    \ 'name': 'eslint'})
-
-" treat .es6 files like javascript
-au BufNewFile,BufRead *.es6 set filetype=javascript
-
-" highlight column 80
-if exists('+colorcolumn')
-  set colorcolumn=80
-else
-  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
+" Theme
+syntax enable
+set t_Co=256
+set background=dark
+"colorscheme 256-jungle
+"colorscheme Chasing_Logic
+"colorscheme OceanicNext
+"colorscheme vydark
