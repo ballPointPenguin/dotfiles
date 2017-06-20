@@ -1,29 +1,29 @@
 [user]
 	name = Benjamin Rosas
 	;email = ballPointPenguin@gmx.us
-  email = benjamin.rosas@bestbuy.com
+	email = benjamin.rosas@bestbuy.com
 [core]
-  autocrlf = input
-  safecrlf = false
+	autocrlf = input
+	safecrlf = false
 	editor = vim
-	excludesfile = /Users/a6000133/.gitignore_global
+	excludesfile = /Users/a1337310/.gitignore_global
 [github]
-  user = ballPointPenguin
+	user = ballPointPenguin
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  br = branch
-  re = rebase
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  ln = log --name-status
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	re = rebase
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	ln = log --name-status
 [color]
 	ui = auto
 [push]
-  default = current
+	default = current
 [merge]
-  tool = p4merge
+	tool = p4merge
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
