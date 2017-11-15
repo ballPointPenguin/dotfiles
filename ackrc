@@ -20,6 +20,7 @@
 --ignore-directory=is:bower_components
 --ignore-directory=is:bundle
 --ignore-directory=is:cache
+--ignore-directory=is:compiled
 --ignore-directory=is:cover_db
 --ignore-directory=is:coverage
 --ignore-directory=is:deps
