@@ -1,6 +1,6 @@
 [user]
 	name = Benjamin Rosas
-  email = benjamin@aliencyb.org
+  email = ben@aliencyb.org
 [core]
   autocrlf = input
   safecrlf = false
