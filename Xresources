@@ -1,16 +1,16 @@
 ! run xrdb ~/.Xresources
 
 ! scrollback buffer lines - 65535 is max on most machines (64 is default)
-URxvt*saveLines: 12000
+URxvt*saveLines: 16384
 
 ! font color (default is black)
-URxvt*foreground: White
+!URxvt*foreground: White
 
 ! true transparency (not to be confused with transparent: true) <-wtf?
 URxvt.depth: 32
 ! background color (prior to tinting) (default is white)
-URxvt*background: [70]#000000
-URxvt.foreground: white
+URxvt*background: [85]#000000
+!URxvt.foreground: white
 
 ! Xft: DejaVu fonts
 URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
@@ -31,13 +31,34 @@ URxvt.loginShell: true
 URxvt.chdir: /home/brosas
 
 ! color man file output
-URxvt.colorIT: #88af5f
-URxvt.colorBD: #d7d7d7
-URxvt.colorUL: #87afd7
+!URxvt.colorIT: #88af5f
+!URxvt.colorBD: #d7d7d7
+!URxvt.colorUL: #87afd7
 
 URxvt.termName: rxvt-unicode
 
 ! disable ctrl+shift character thingy
 URxvt*iso14755: false
 
+! https://www.reddit.com/r/unixporn/comments/8giij5/guide_defining_program_colors_through_xresources/
+#include "/home/brosas/ballPointPenguin/dotfiles/blaquemagick.Xcolors"
 
+!*.foreground:  FOREGROUND
+!*.background:  BACKGROUND
+!*.cursorColor: FOREGROUND
+!*.color0:      COLOR0
+!*.color8:      COLOR8
+!*.color1:      COLOR1
+!*.color9:      COLOR9
+!*.color2:      COLOR2
+!*.color10:     COLOR10
+!*.color3:      COLOR3
+!*.color11:     COLOR11
+!*.color4:      COLOR4
+!*.color12:     COLOR12
+!*.color5:      COLOR5
+!*.color13:     COLOR13
+!*.color6:      COLOR6
+!*.color14:     COLOR14
+!*.color7:      COLOR7
+!*.color15:     COLOR15
