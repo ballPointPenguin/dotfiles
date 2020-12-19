@@ -13,19 +13,19 @@ URxvt*background: [85]#000000
 !URxvt.foreground: white
 
 ! Xft: DejaVu fonts
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
 
 ! scrollbar - true (default) or false
-URxvt*scrollBar: true
+URxvt*scrollBar: false
 
 ! scrollbar position - left=false (default) or right=true
-URxvt*scrollBar_right: true
+! URxvt*scrollBar_right: true
 
-URxvt*borderLess: false
-URxvt*internalBorder: 1
+! URxvt*borderLess: false
+! URxvt*internalBorder: 1
 
 ! scrollbar style - rxvt (default), plain, next, or xterm
-URxvt*scrollstyle: plain
+! URxvt*scrollstyle: plain
 
 URxvt.loginShell: true
 URxvt.chdir: /home/brosas
