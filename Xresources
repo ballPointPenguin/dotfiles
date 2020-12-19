@@ -1,64 +1,62 @@
-! run xrdb ~/.Xresources
+! Cursor theme
+xcursor.theme:            Vanilla-DMZ
 
-! scrollback buffer lines - 65535 is max on most machines (64 is default)
-URxvt*saveLines: 16384
+! URxvt config
+URxvt*termName:           rxvt-16color
 
-! font color (default is black)
-!URxvt*foreground: White
+URxvt.scrollBar:          off
+URxvt.font:               xft:monaco:size=13:antialias=true
+URxvt.internalBorder:     0
+URxvt*selectToClipboard:  true
+URxvt*saveLines:          10000
 
-! true transparency (not to be confused with transparent: true) <-wtf?
-URxvt.depth: 32
-! background color (prior to tinting) (default is white)
-URxvt*background: [85]#000000
-!URxvt.foreground: white
+URxvt.perl-ext-common:    default,matcher,tabbedex,searchable-scrollback
+URxvt.urlLauncher:        /usr/bin/firefox
+URxvt.matcher.button:     1
+URxvt.tabbed.tabbar-fg:   8
+URxvt.tabbed.tabbar-bg:   0
+URxvt.tabbed.tab-fg:      2
+URxvt.tabbed.tab-bg:      0
+URxvt.tabbed.new-button:  no
+URxvt.tabbed.title:       no
 
-! Xft: DejaVu fonts
-URxvt*font: xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
+! Tango color palette
+URxvt.depth:              32
+URxvt*background:         [85]#2e3436
+URxvt*foreground:         #eeeeec
+URxvt*cursorColor:        #8ae234
+! foreground color for underline
+URxvt*colorUL:            #8ae234
+! line color for underline
+URxvt*underlineColor:     #92659a
+! black dark/light
+URxvt*color0:             #2e3436
+URxvt*color8:             #6e706b
+! red dark/light
+URxvt*color1:             #cc0000
+URxvt*color9:             #ef2929
+! green dark/light
+URxvt*color2:             #4e9a06
+URxvt*color10:            #8ae234
+! yellow dark/light
+URxvt*color3:             #edd400
+URxvt*color11:            #fce94f
+! blue dark/light
+URxvt*color4:             #3465a4
+URxvt*color12:            #729fcf
+! magenta dark/light
+URxvt*color5:             #92659a
+URxvt*color13:            #c19fbe
+! cyan dark/light
+URxvt*color6:             #07c7ca
+URxvt*color14:            #63e9e9
+! white dark/light
+URxvt*color7:             #d3d7cf
+URxvt*color15:            #eeeeec
 
-! scrollbar - true (default) or false
-URxvt*scrollBar: false
+! xscreensaver
+xscreensaver.fade:        false
+xscreensaver.unfade:      false
 
-! scrollbar position - left=false (default) or right=true
-! URxvt*scrollBar_right: true
-
-! URxvt*borderLess: false
-! URxvt*internalBorder: 1
-
-! scrollbar style - rxvt (default), plain, next, or xterm
-! URxvt*scrollstyle: plain
-
-URxvt.loginShell: true
-URxvt.chdir: /home/brosas
-
-! color man file output
-!URxvt.colorIT: #88af5f
-!URxvt.colorBD: #d7d7d7
-!URxvt.colorUL: #87afd7
-
-URxvt.termName: rxvt-unicode
-
-! disable ctrl+shift character thingy
-URxvt*iso14755: false
-
-! https://www.reddit.com/r/unixporn/comments/8giij5/guide_defining_program_colors_through_xresources/
-#include "/home/brosas/ballPointPenguin/dotfiles/blaquemagick.Xcolors"
-
-!*.foreground:  FOREGROUND
-!*.background:  BACKGROUND
-!*.cursorColor: FOREGROUND
-!*.color0:      COLOR0
-!*.color8:      COLOR8
-!*.color1:      COLOR1
-!*.color9:      COLOR9
-!*.color2:      COLOR2
-!*.color10:     COLOR10
-!*.color3:      COLOR3
-!*.color11:     COLOR11
-!*.color4:      COLOR4
-!*.color12:     COLOR12
-!*.color5:      COLOR5
-!*.color13:     COLOR13
-!*.color6:      COLOR6
-!*.color14:     COLOR14
-!*.color7:      COLOR7
-!*.color15:     COLOR15
+URxvt.loginShell:         true
+URxvt.chdir:              /home/brosas
